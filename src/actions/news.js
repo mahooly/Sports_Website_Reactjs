@@ -5,7 +5,9 @@ export const addArticle = (
         description = '',
         title = '',
         image = '',
-        date = 0
+        date = 0,
+        tags = [],
+        text = ''
     } = {}
 ) => ({
     type: 'ADD_ARTICLE',
@@ -14,7 +16,9 @@ export const addArticle = (
         description,
         title,
         image,
-        date
+        date,
+        tags,
+        text
     }
 });
 
