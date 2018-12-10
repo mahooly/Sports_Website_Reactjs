@@ -1,15 +1,15 @@
 import React from 'react';
 import {connect} from "react-redux";
+import {Link} from 'react-router-dom';
 
 const LeagueItem = (props) => (
     <div>
-        <p>{props.league.name}</p>
+        <Link to={`/league/${props.league.name}`}>{props.league.name}</Link>
     </div>
 );
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state) => {
     return {
-        ...props,
         matches: state.matches
     };
 };

@@ -1,18 +1,22 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import LeagueItem from './LeagueItem';
+import leagueSelector from '../selectors/leagues';
+import LeagueFilter from './LeagueFilter';
 
 const Leagues = (props) => (
     <div>
         <p>صفحه لیگ ها</p>
-        {props.leagues.map((league) => <LeagueItem key={league.name} {...league}/>)}
+        <LeagueFilter/>
+        {props.leagues.map((league) => {
+            return <LeagueItem key={league.name} league={league}/>
+        })}
     </div>
 );
 
 const mapStateToProps = (state) => {
     return {
-        leagues: state.leagues.find((league) => league.isOngoing),
-        oldLeagues: state.leagues.find((league) => !league.isOngoing)
+        leagues: leagueSelector(state.leagues, state.filters)
     };
 };
 

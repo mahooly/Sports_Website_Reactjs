@@ -5,6 +5,7 @@ export const addLeague = (
         name = '',
         isOngoing = true,
         image = '',
+        type = '',
         startDate = 0
     } = {}
 ) => ({
@@ -14,6 +15,7 @@ export const addLeague = (
         name,
         isOngoing,
         image,
+        type,
         startDate
     }
 });

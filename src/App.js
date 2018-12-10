@@ -7,6 +7,8 @@ import {addArticle} from "./actions/news";
 import {addTeam} from "./actions/teams";
 import {addMatch} from "./actions/matches";
 import {addPlayer} from "./actions/players";
+import {addLeague} from "./actions/leagues";
+import moment from 'moment';
 
 const store = configureStore();
 
@@ -34,6 +36,7 @@ store.dispatch(addTeam({name: 'Atletico Madrid', type: 'football', players: [{na
 store.dispatch(addMatch({type: 'football', teamOne: 'Manchester United', teamTwo: 'Atletico Madrid', scoreOne: '1', scoreTwo:'0'}));
 store.dispatch(addMatch({type: 'football', teamOne: 'Liverpool', teamTwo: 'Atletico Madrid', scoreOne: '0', scoreTwo:'0'}));
 store.dispatch(addPlayer({name: 'David de Gea', positions: 'goalKeeper', height:1.92, teams: ['Manchester United']}));
+store.dispatch(addLeague({name: 'Champions League 2018', isOngoing: true, startDate: moment().toDate(), type: 'football'}));
 
 const jsx = (
     <Provider store={store}>

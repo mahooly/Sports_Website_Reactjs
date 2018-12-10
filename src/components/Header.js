@@ -8,6 +8,8 @@ const Header = () => (
         </Link>
         <NavLink to="/" activeClassName="is-active" exact={true}>خانه</NavLink>
         <NavLink to="/leagues" activeClassName="is-active">لیگ ها</NavLink>
+        <NavLink to="/login" activeClassName="is-active">ورود</NavLink>
+        <NavLink to="/register" activeClassName="is-active">ثبت نام</NavLink>
     </header>
 );
 
