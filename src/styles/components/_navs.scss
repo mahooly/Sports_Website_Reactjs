@@ -1,0 +1,14 @@
+.navs-container {
+  display: flex;
+  justify-content: space-around;
+  background: $blue;
+  border: none;
+  border-bottom: .6rem solid darken($blue, 10%);
+  font-weight: bold;
+  font-size: $m-size;
+  padding: 2.4rem;
+}
+
+.nav {
+  color: white;
+}

@@ -1,0 +1,49 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: B Lotus, B Nazanin, sans-serif;
+  font-size: $m-size;
+  direction: rtl;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.header {
+  background: lighten($blue, 25%);
+  margin: 0;
+  padding: $s-size;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lighten($blue, 40%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $gray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken($blue, 30%);
+}

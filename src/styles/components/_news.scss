@@ -1,0 +1,30 @@
+.news {
+  float: right;
+  flex-grow: 1;
+}
+
+.news-item {
+  display:flex;
+  background: lighten($blue, 40%);
+  border: none;
+  border-bottom: 1px solid $gray;
+  padding: $m-size;
+  margin: $s-size $m-size;
+}
+
+.news-item__content {
+  float: right;
+  flex-grow: 1;
+  margin: $xl-size;
+}
+
+.news-item__img {
+  float: left;
+}
+
+.news-page {
+  display: flex;
+  background: fixed;
+  margin: 0;
+  padding: $xl-size;
+}
