@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import Tabs from './Tabs';
 
 const Scoreboard = (props) => (
-  <div>
+  <div className='score-board'>
       <h2>بازی ها</h2>
       {props.matches.map((match) => {
           return <ScoreItem key={match.id} {...match}/>

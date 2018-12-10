@@ -1,0 +1,29 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: B Lotus, B Nazanin, sans-serif;
+  font-size: $m-size;
+  direction: rtl;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.header {
+  background: lighten($blue, 25%);
+  margin: 0;
+  padding: $s-size;
+}

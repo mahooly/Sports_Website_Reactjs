@@ -1,0 +1,12 @@
+.score-board {
+  float: left;
+}
+
+.score-item {
+  background: $red;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  padding: $m-size;
+  margin: $m-size;
+  text-align: center;
+}

@@ -4,10 +4,12 @@ import { NavLink, Link } from 'react-router-dom';
 const Header = () => (
     <header>
         <Link to={"/"}>
-            <h1>ورزش فلان</h1>
+            <h1 className='header'>ورزش فلان</h1>
         </Link>
-        <NavLink to="/" activeClassName="is-active" exact={true}>خانه</NavLink>
-        <NavLink to="/leagues" activeClassName="is-active">لیگ ها</NavLink>
+        <div className='navs-container'>
+            <NavLink to="/" className='nav' activeClassName="is-active" exact={true}>خانه</NavLink>
+            <NavLink to="/leagues" className='nav' activeClassName="is-active">لیگ ها</NavLink>
+        </div>
     </header>
 );
 

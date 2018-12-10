@@ -7,6 +7,8 @@ import {addArticle} from "./actions/news";
 import {addTeam} from "./actions/teams";
 import {addMatch} from "./actions/matches";
 import {addPlayer} from "./actions/players";
+import 'normalize.css/normalize.css';
+import './styles/style.scss';
 
 const store = configureStore();
 

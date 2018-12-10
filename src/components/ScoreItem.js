@@ -23,7 +23,7 @@ export default class ScoreItem extends React.Component {
             return <Redirect push to={`/match/${id}`} />;
         }
         return (
-            <div onClick={this.onClick}>
+            <div className='score-item' onClick={this.onClick}>
                 <p>
                     <Link to={`/team/${teamOne}`}>{teamOne}</Link> {scoreOne} - {scoreTwo} <Link
                     to={`/team/${teamTwo}`}>{teamTwo}</Link>
