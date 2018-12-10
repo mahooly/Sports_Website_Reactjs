@@ -11,9 +11,9 @@ const News = (props) => (
     </div>
 );
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, props) => {
     return {
-        news: state.news
+        news: props.news ? props.news : state.news
     };
 };
 

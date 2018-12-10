@@ -5,6 +5,8 @@ import {Provider} from 'react-redux';
 import configureStore from './store/configureStore'
 import {addArticle} from "./actions/news";
 import {addTeam} from "./actions/teams";
+import {addMatch} from "./actions/matches";
+import {addPlayer} from "./actions/players";
 
 const store = configureStore();
 
@@ -28,6 +30,10 @@ store.dispatch(addArticle(
     }));
 
 store.dispatch(addTeam({name: 'Manchester United', type: 'football', players: [{name: 'David de Gea', position: 'دروازه بان'}]}));
+store.dispatch(addTeam({name: 'Atletico Madrid', type: 'football', players: [{name: 'Antoine Griezmann', position: 'forward'}]}));
+store.dispatch(addMatch({type: 'football', teamOne: 'Manchester United', teamTwo: 'Atletico Madrid', scoreOne: '1', scoreTwo:'0'}));
+store.dispatch(addMatch({type: 'football', teamOne: 'Liverpool', teamTwo: 'Atletico Madrid', scoreOne: '0', scoreTwo:'0'}));
+store.dispatch(addPlayer({name: 'David de Gea', positions: 'goalKeeper', height:1.92, teams: ['Manchester United']}));
 
 const jsx = (
     <Provider store={store}>
