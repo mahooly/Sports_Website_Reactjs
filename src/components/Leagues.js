@@ -3,14 +3,19 @@ import {connect} from 'react-redux';
 import LeagueItem from './LeagueItem';
 import leagueSelector from '../selectors/leagues';
 import LeagueFilter from './LeagueFilter';
+import fixed_bg from '../../public/images/img1.jpg';
 
-const Leagues = (props) => {
+const bg = {
+    backgroundImage: `url(${fixed_bg})`
+};
+
+const Leagues = (props) =>  {
     const oldLeagues = props.leagues.filter((league) => !league.isOngoing).sort((a, b) => {
         return a.startDate > b.startDate ? -1 : 1
     });
     const newLeagues = props.leagues.filter((league) => league.isOngoing);
     return (
-        <div>
+        <div className='leagues' style={bg}>
             <p>صفحه لیگ ها</p>
             <LeagueFilter/>
             {newLeagues.map((league) => {
@@ -26,7 +31,6 @@ const Leagues = (props) => {
         </div>
     );
 }
-
 const mapStateToProps = (state) => {
     return {
         leagues: leagueSelector(state.leagues, state.filters)

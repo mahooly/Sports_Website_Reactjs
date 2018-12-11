@@ -5,6 +5,7 @@
   flex-direction: column;
   flex-grow: 1;
   background: fixed;
+  background-size: cover;
   height: 100%;
   width: 100%;
 }
@@ -20,20 +21,20 @@
   flex-basis: auto;
   padding: $m-size;
   margin: $xl-size;
-  direction: ltr;
 }
 
-.form-submission > label {
+.form-submission label {
   color: $gray;
   font-style: italic;
   margin: $m-size 0 0 0;
   padding: 0 $m-size;
 }
 
-.form-submission > input {
+.form-submission input {
   background: $gray-blue;
   border: none;
   border-bottom: .3rem solid darken($gray-blue, 10%);
   color: $off-white;
   padding: $s-size;
+  width: 90%;
 }

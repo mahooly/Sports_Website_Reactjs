@@ -1,0 +1,26 @@
+.leagues {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.league {
+  background: lighten($blue, 40%);
+  border: 1px solid lighten($gray, 50%);
+  display: flex;
+  justify-content: space-between;
+  padding: $l-size $m-size;
+  color: white;
+  font-weight: 500;
+  font-size: $m-size;
+  margin: 0 $xl-size;
+  word-break: break-all;
+}
+
+.league-page {
+
+}

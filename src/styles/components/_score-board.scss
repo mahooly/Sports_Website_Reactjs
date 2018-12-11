@@ -4,6 +4,15 @@
   border: 1px solid lighten($gray, 50%);
 }
 
+.home-page > .score-board {
+  border: none;
+}
+
+.tab-content > .score-board {
+  width: 100%;
+  margin: 0;
+}
+
 .score-item {
   background: white;
   border: none;

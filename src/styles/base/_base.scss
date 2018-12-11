@@ -11,7 +11,7 @@ body, .container {
   font-size: $m-size;
   display: flex;
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   flex-direction: column;
   flex-grow: 1;
 }
@@ -24,6 +24,16 @@ a {
   text-decoration: none;
   color: black;
   cursor: pointer;
+}
+
+select {
+  margin: $m-size;
+}
+
+.leagues h3 {
+  margin-right: $m-size;
+  margin-top: $xl-size;
+  color: white;
 }
 
 .tab-list-item {

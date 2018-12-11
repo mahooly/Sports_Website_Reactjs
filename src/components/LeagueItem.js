@@ -3,8 +3,8 @@ import {connect} from "react-redux";
 import {Link} from 'react-router-dom';
 
 const LeagueItem = (props) => (
-    <div>
-        <Link to={`/league/${props.league.name}`}>{props.league.name}</Link><img src={props.league.image}/>
+    <div className='league'>
+        <Link to={`/league/${props.league.name}`}>{props.league.name}</Link>
     </div>
 );
 

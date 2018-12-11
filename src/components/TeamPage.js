@@ -8,14 +8,14 @@ import MatchFilter from './MatchFilter';
 import selectMatches from '../selectors/matches';
 
 const TeamPage = (props) => (
-    <div>
+    <div className='team-page'>
         <div>
             <p>{props.team.logo && <img src={props.team.logo}/>}{props.team.name}</p>
         </div>
         <Tabs>
             <div label="بازی ها">
                 <MatchFilter/>
-                <Scoreboard matches={props.matches} type={props.team.type}/>
+                <Scoreboard matches={props.matches} type={props.team.type} className='score-board'/>
             </div>
             <div label="اخبار">
                 <News news={props.news}/>

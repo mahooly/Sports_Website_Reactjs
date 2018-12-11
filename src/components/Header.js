@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 const Header = () => (
     <header>
         <Link to={"/"}>
-            <h1 className='header'>ورزش فلان</h1>
+            <h1 className='header'>ورزش چهار</h1>
         </Link>
         <div className='navs-container'>
             <NavLink to="/" className='nav' activeClassName="is-active" exact={true}>خانه</NavLink>
