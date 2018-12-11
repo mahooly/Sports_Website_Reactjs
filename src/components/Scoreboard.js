@@ -1,10 +1,10 @@
 import React from 'react'
 import ScoreItem from './ScoreItem'
 import {connect} from "react-redux";
-import Tabs from './Tabs';
 
 const Scoreboard = (props) => (
   <div className='score-board'>
+      {console.log(props)}
       <h2 className='score-item'>بازی ها</h2>
       {props.matches.map((match) => {
           return <ScoreItem key={match.id} {...match}/>
@@ -14,7 +14,7 @@ const Scoreboard = (props) => (
 
 const mapStateToProps = (state, props) => {
     return {
-        matches: props.matches ? props.matches : state.matches
+        matches: (props.matches ? props.matches : state.matches).filter((match) => match.type === props.type)
     };
 };
 

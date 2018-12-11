@@ -9,7 +9,9 @@ import selectMatches from '../selectors/matches';
 
 const TeamPage = (props) => (
     <div>
-        <p>{props.team.name}</p>
+        <div>
+            <p>{props.team.logo && <img src={props.team.logo}/>}{props.team.name}</p>
+        </div>
         <Tabs>
             <div label="Matches">
                 <MatchFilter/>

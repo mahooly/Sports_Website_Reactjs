@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import moment from 'jalali-moment';
 
 const NewsItem = ({ id, title, description, image, date, tags}) => (
     <div className='news-item'>
@@ -8,7 +9,7 @@ const NewsItem = ({ id, title, description, image, date, tags}) => (
             <Link to={`/news/${id}`}>
                 <h3>{title}</h3>
             </Link>
-            <p>{date}</p>
+            <p>{moment(date).locale('fa').format("MMM-DD HH:mm")}</p>
             {tags.map((tag) => {
                 return <p key={tag}>{tag}</p>
             })}

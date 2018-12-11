@@ -1,6 +1,6 @@
 export default (matches, text, { sortBy }) => {
     return matches.filter((match) => {
-        const matchOne = match.teamOne.toLowerCase() === text.toLowerCase;
+        const matchOne = match.teamOne.toLowerCase() === text.toLowerCase();
         const matchTwo = match.teamTwo.toLowerCase() === text.toLowerCase();
         const matchLeague = match.league.toLowerCase() === text.toLowerCase();
         return matchOne || matchTwo || matchLeague;
