@@ -17,7 +17,7 @@ const MatchPage = (props) => {
         <Tabs>
             <div label="تایم لاین">
                 <table>
-                    {timeline.length && timeline.map((event) => {return (
+                    {timeline.map((event) => {return (
                         <tr>
                             <td>{event.first}</td>
                             <td>{event.time}</td>
