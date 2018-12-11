@@ -59,7 +59,9 @@ store.dispatch(addMatch({
     pointOne: 3,
     pointTwo: 1,
     stats: [{first: 1, name: 'گل ها', second: 0}],
-    events: [{first: 'گل', time: '11:50'}, {second: 'کرنر', time: '11:55'}]
+    events: [{first: 'گل', time: '11:50'}, {second: 'کرنر', time: '11:55'}],
+    playersOne: [{name: 'David de Gea', position: 'دروازه بان'}],
+    playersTwo: [{name: 'Antoine Griezmann', position: 'مهاجم'}]
 }));
 store.dispatch(addMatch({
     type: 'football',

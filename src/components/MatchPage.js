@@ -57,9 +57,8 @@ const MatchPage = (props) => {
                         );
                     })}
                     <tr>
-                        <td>  </td>
-                        <td>بازیکنان ذخیره</td>
                         <td></td>
+                        <td>بازیکنان ذخیره</td>
                     </tr>
                     {props.match.subOne.map((player) => {
                         return (
@@ -85,7 +84,6 @@ const MatchPage = (props) => {
                     <tr>
                         <td>  </td>
                         <td>بازیکنان ذخیره</td>
-                        <td></td>
                     </tr>
                     {props.match.subTwo.map((player) => {
                         return (
