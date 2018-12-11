@@ -16,7 +16,15 @@ const MatchPage = (props) => {
         <p>{teamOne.name} {props.match.scoreOne} - {props.match.scoreTwo} {teamTwo.name}</p>
         <Tabs>
             <div label="تایم لاین">
-                {timeline && timeline.map((event) => <div>{event.time}<p>{event.text}</p></div>)}
+                <table>
+                    {timeline.length && timeline.map((event) => {return (
+                        <tr>
+                            <td>{event.first}</td>
+                            <td>{event.time}</td>
+                            <td>{event.second}</td>
+                        </tr>
+                    )})}
+                </table>
             </div>
             <div label="آمار">
                 <table>

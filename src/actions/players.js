@@ -10,6 +10,7 @@ export const addPlayer = (
         weight = 0,
         nationality = '',
         stats = [],
+        image = ''
     } = {}
 ) => ({
     type: 'ADD_PLAYER',
@@ -22,7 +23,8 @@ export const addPlayer = (
         height,
         weight,
         nationality,
-        stats
+        stats,
+        image
     }
 });
 
