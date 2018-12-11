@@ -10,7 +10,7 @@ import selectMatches from '../selectors/matches';
 const TeamPage = (props) => (
     <div className='team-page'>
         <div>
-            <p>{props.team.logo && <img src={props.team.logo}/>}{props.team.name}</p>
+            <h2>{props.team.logo && <img className='logo' src={props.team.logo}/>}{props.team.name}</h2>
         </div>
         <Tabs>
             <div label="بازی ها">

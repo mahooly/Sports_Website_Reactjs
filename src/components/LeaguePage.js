@@ -16,7 +16,7 @@ const LeaguePage = (props) => (
         <h2>{props.league.name}</h2>
         <div  className='home-page'>
             <TeamFilter/>
-            <table id='league-games'>
+            <table className='table-format'>
                 <thead>
                 <th>تیم</th>
                 <th>تعداد بازی ها</th>
