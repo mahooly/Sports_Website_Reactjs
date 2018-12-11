@@ -13,14 +13,14 @@ const TeamPage = (props) => (
             <p>{props.team.logo && <img src={props.team.logo}/>}{props.team.name}</p>
         </div>
         <Tabs>
-            <div label="Matches">
+            <div label="بازی ها">
                 <MatchFilter/>
-                <Scoreboard matches={props.matches}/>
+                <Scoreboard matches={props.matches} type={props.team.type}/>
             </div>
-            <div label="News">
+            <div label="اخبار">
                 <News news={props.news}/>
             </div>
-            <div label="Players">
+            <div label="اعضای تیم">
                 {props.team.players.map((player) => {
                     return (
                         <div key={player.name}>
@@ -28,6 +28,16 @@ const TeamPage = (props) => (
                                 <Link to={`/player/${player.name}`}>
                                     {player.name}
                                 </Link> {player.position}
+                            </p>
+                        </div>
+                    )
+                })}
+                {props.team.coachingStaff.map((staff) => {
+                    return (
+                        <div key={staff.name}>
+                            <p>
+                                {staff.name}
+                                {staff.position}
                             </p>
                         </div>
                     )

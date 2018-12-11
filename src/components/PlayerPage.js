@@ -14,8 +14,8 @@ const PlayerPage = (props) => (
         {props.player.stats.map((stat) => {
             return (
                 <tr>
-                    <th>{stat.name}</th>
-                    <th>{stat.value}</th>
+                    <td>{stat.name}</td>
+                    <td>{stat.value}</td>
                 </tr>
             )
         })}

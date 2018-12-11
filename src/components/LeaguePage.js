@@ -10,7 +10,7 @@ const LeaguePage = (props) => (
     <div>
         <h2>{props.league.name}</h2>
         {console.log(props.matches)}
-        <Scoreboard matches={props.matches}/>
+        <Scoreboard matches={props.matches} type={props.league.type}/>
         <TeamFilter/>
         <table>
             <thead>

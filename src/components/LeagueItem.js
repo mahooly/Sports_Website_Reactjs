@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const LeagueItem = (props) => (
     <div>
-        <Link to={`/league/${props.league.name}`}>{props.league.name}</Link>
+        <Link to={`/league/${props.league.name}`}>{props.league.name}</Link><img src={props.league.image}/>
     </div>
 );
 

@@ -29,6 +29,31 @@ export default (matches, text, { sortBy }) => {
             }
 
         }
+
+        else if (sortBy === 'points')
+        {
+            if ((a.teamOne === text))
+            {
+                if (b.teamOne === text)
+                {
+                    return a.pointOne > b.pointOne ? -1 : 1;
+                }
+                else if (b.teamTwo === text)
+                {
+                    return a.pointOne > b.pointTwo ? -1 : 1;
+                }
+            }
+            else {
+                if (b.teamOne === text)
+                {
+                    return a.pointTwo > b.pointOne ? -1 : 1;
+                }
+                else if (b.teamTwo === text)
+                {
+                    return a.pointTwo > b.pointTwo ? -1 : 1;
+                }
+            }
+        }
         else {
             return 0;
         }

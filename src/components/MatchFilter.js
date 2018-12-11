@@ -1,4 +1,4 @@
-import {sortByDate, sortByWin} from "../actions/filters";
+import {sortByDate, sortByPoints, sortByWin} from "../actions/filters";
 import React from "react";
 import {connect} from "react-redux";
 
@@ -20,10 +20,14 @@ class MatchFilter extends React.Component {
                         else if (e.target.value === 'win') {
                             this.props.dispatch(sortByWin(e.target.value));
                         }
+                        else if (e.target.value === 'points') {
+                            this.props.dispatch(sortByPoints(e.target.value));
+                        }
                     }}
                 >
                     <option value="date">تاریخ</option>
                     <option value="win">برد</option>
+                    <option value="points">امتیاز</option>
                 </select>
 
             </div>)

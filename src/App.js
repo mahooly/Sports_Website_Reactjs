@@ -19,8 +19,8 @@ store.dispatch(addArticle(
         description: 'یه چیزی',
         title: 'بلاه',
         image: '',
-        date: 50,
-        tags: ['همون'],
+        date: 1234567890,
+        tags: ['منچستر یونایتد', 'Atletico Madrid'],
         text: 'هعی'
     }));
 store.dispatch(addArticle(
@@ -34,7 +34,7 @@ store.dispatch(addArticle(
     }));
 
 store.dispatch(addTeam({
-    name: 'Manchester United',
+    name: 'منچستر یونایتد',
     type: 'football',
     players: [{name: 'David de Gea', position: 'دروازه بان'}]
 }));
@@ -45,7 +45,7 @@ store.dispatch(addTeam({
 }));
 store.dispatch(addMatch({
     type: 'football',
-    teamOne: 'Manchester United',
+    teamOne: 'منچستر یونایتد',
     teamTwo: 'Atletico Madrid',
     scoreOne: '1',
     scoreTwo: '0',
@@ -54,7 +54,10 @@ store.dispatch(addMatch({
     logoTwo: './public/images/6-98x98.png',
     winOne: 1,
     winTwo: 0,
-    date: 1234567890
+    date: 1234567890,
+    pointOne: 3,
+    pointTwo: 1,
+    stats: [{first: 1, name: 'گل ها', second: 0}]
 }));
 store.dispatch(addMatch({
     type: 'football',
@@ -66,7 +69,10 @@ store.dispatch(addMatch({
     logoOne: './public/images/5-98x98.png',
     logoTwo: './public/images/6-98x98.png',
     winOne: 0,
-    winTwo: 0
+    winTwo: 0,
+    pointOne: 2,
+    pointTwo: 2,
+    date: moment().millisecond()
 }));
 
 store.dispatch(addMatch({
@@ -79,16 +85,19 @@ store.dispatch(addMatch({
     logoOne: './public/images/5-98x98.png',
     logoTwo: './public/images/6-98x98.png',
     winOne: 0,
-    winTwo: 1
+    winTwo: 1,
+    pointOne: 1,
+    pointTwo: 3
 }));
 
-store.dispatch(addPlayer({name: 'David de Gea', positions: 'goalKeeper', height: 1.92, teams: ['Manchester United']}));
+store.dispatch(addPlayer({name: 'David de Gea', positions: 'goalKeeper', height: 1.92, teams: ['منچستر یونایتد']}));
 store.dispatch(addLeague({
     name: 'Champions League 2018',
     isOngoing: true,
-    startDate: moment().toDate(),
+    startDate: moment().millisecond(),
     type: 'football',
-    teams: [{name: 'Manchester United', matches: 12, points: 31}, {name: 'Atletico Madrid', matches: 12, points: 24}]
+    teams: [{name: 'منچستر یونایتد', matches: 12, points: 31}, {name: 'Atletico Madrid', matches: 12, points: 24}],
+    image: 'https://www.freevector.com/uploads/vector/preview/11403/FreeVector-UEFA-Champions-League.jpg'
 }));
 
 const jsx = (
