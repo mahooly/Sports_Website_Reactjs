@@ -20,7 +20,7 @@ store.dispatch(addArticle(
         title: 'بلاه',
         image: '',
         date: 1234567890,
-        tags: ['منچستر یونایتد', 'Atletico Madrid'],
+        tags: ['منچستر یونایتد', 'اتلتیکو مادرید'],
         text: 'هعی'
     }));
 store.dispatch(addArticle(
@@ -39,17 +39,17 @@ store.dispatch(addTeam({
     players: [{name: 'David de Gea', position: 'دروازه بان'}]
 }));
 store.dispatch(addTeam({
-    name: 'Atletico Madrid',
+    name: 'اتلتیکو مادرید',
     type: 'football',
     players: [{name: 'Antoine Griezmann', position: 'forward'}]
 }));
 store.dispatch(addMatch({
     type: 'football',
     teamOne: 'منچستر یونایتد',
-    teamTwo: 'Atletico Madrid',
+    teamTwo: 'اتلتیکو مادرید',
     scoreOne: '1',
     scoreTwo: '0',
-    league: 'Champions League 2018',
+    league: 'لیگ قهرمانان 2018',
     logoOne: './public/images/5-98x98.png',
     logoTwo: './public/images/6-98x98.png',
     winOne: 1,
@@ -61,11 +61,11 @@ store.dispatch(addMatch({
 }));
 store.dispatch(addMatch({
     type: 'football',
-    teamOne: 'Liverpool',
-    teamTwo: 'Atletico Madrid',
+    teamOne: 'لیورپول',
+    teamTwo: 'اتلتیکو مادرید',
     scoreOne: '0',
     scoreTwo: '0',
-    league: 'Champions League 2018',
+    league: 'لیگ قهرمانان 2018',
     logoOne: './public/images/5-98x98.png',
     logoTwo: './public/images/6-98x98.png',
     winOne: 0,
@@ -77,11 +77,11 @@ store.dispatch(addMatch({
 
 store.dispatch(addMatch({
     type: 'football',
-    teamOne: 'Barcelona',
-    teamTwo: 'Atletico Madrid',
+    teamOne: 'بارسلونا',
+    teamTwo: 'اتلتیکو مادرید',
     scoreOne: '1',
     scoreTwo: '2',
-    league: 'Champions League 2018',
+    league: 'لیگ قهرمانان 2018',
     logoOne: './public/images/5-98x98.png',
     logoTwo: './public/images/6-98x98.png',
     winOne: 0,
@@ -92,11 +92,11 @@ store.dispatch(addMatch({
 
 store.dispatch(addPlayer({name: 'David de Gea', positions: 'goalKeeper', height: 1.92, teams: ['منچستر یونایتد']}));
 store.dispatch(addLeague({
-    name: 'Champions League 2018',
+    name: 'لیگ قهرمانان 2018',
     isOngoing: true,
     startDate: moment().millisecond(),
     type: 'football',
-    teams: [{name: 'منچستر یونایتد', matches: 12, points: 31}, {name: 'Atletico Madrid', matches: 12, points: 24}],
+    teams: [{name: 'منچستر یونایتد', matches: 12, points: 31}, {name: 'اتلتیکو مادرید', matches: 12, points: 24}],
     image: 'https://www.freevector.com/uploads/vector/preview/11403/FreeVector-UEFA-Champions-League.jpg'
 }));
 

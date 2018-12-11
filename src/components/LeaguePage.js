@@ -15,9 +15,8 @@ const LeaguePage = (props) => (
     <div className='league-page' style={bg}>
         <h2>{props.league.name}</h2>
         <div  className='home-page'>
-            <Scoreboard matches={props.matches} type={props.league.type}/>
             <TeamFilter/>
-            <table>
+            <table id='league-games'>
                 <thead>
                 <th>تیم</th>
                 <th>تعداد بازی ها</th>
@@ -27,14 +26,15 @@ const LeaguePage = (props) => (
                 {props.league.teams.map((team) => {
                     return (
                         <tr>
-                            <th><Link to={`/team/${team.name}`}>{team.name}</Link></th>
-                            <th>{team.matches}</th>
-                            <th>{team.points}</th>
+                            <td><Link to={`/team/${team.name}`}>{team.name}</Link></td>
+                            <td>{team.matches}</td>
+                            <td>{team.points}</td>
                         </tr>
                     )
                 })}
                 </tbody>
             </table>
+            <Scoreboard matches={props.matches} type={props.league.type}/>
         </div>
     </div>
 );

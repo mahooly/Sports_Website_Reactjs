@@ -16,7 +16,7 @@ const Leagues = (props) =>  {
     const newLeagues = props.leagues.filter((league) => league.isOngoing);
     return (
         <div className='leagues' style={bg}>
-            <p>صفحه لیگ ها</p>
+            <h3>صفحه لیگ ها</h3>
             <LeagueFilter/>
             {newLeagues.map((league) => {
                 return <LeagueItem key={league.name} league={league}/>

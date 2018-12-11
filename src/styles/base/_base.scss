@@ -22,6 +22,7 @@ button {
 
 a {
   text-decoration: none;
+  font-weight: bold;
   color: black;
   cursor: pointer;
 }
@@ -34,6 +35,11 @@ select {
   margin-right: $m-size;
   margin-top: $xl-size;
   color: white;
+}
+
+.league-page > h2 {
+  margin-right: $m-size;
+  margin-top: $xl-size;
 }
 
 .tab-list-item {

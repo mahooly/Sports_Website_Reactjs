@@ -6,6 +6,9 @@
 
 .team-page .tab-content {
   padding: 0 $m-size;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .tab-list-item {

@@ -41,14 +41,14 @@ export default class Login extends Component {
         return (
             <div className="Login" style={bg}>
                 <form className='form-submission' onSubmit={this.handleSubmit}>
-                    <label>Email </label>
+                    <label>ایمیل </label>
                     <input
                         autoFocus
                         type="email"
                         value={this.state.email}
                         onChange={this.handleEmailChange}
                     />
-                    <label>Password </label>
+                    <label>رمز عبور </label>
                     <input
                         value={this.state.password}
                         onChange={this.handlePasswordChange}
@@ -59,7 +59,7 @@ export default class Login extends Component {
                         disabled={!this.validateForm()}
                         type="submit"
                     >
-                        Login
+                        ورود
                     </button>
                 </form>
             </div>

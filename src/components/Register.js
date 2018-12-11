@@ -58,20 +58,20 @@ export default class Register extends Component {
         return (
             <div className="Signup" style={bg}>
                 <form className='form-submission' onSubmit={this.handleSubmit}>
-                    <label>Email</label>
+                    <label>ایمیل</label>
                     <input
                         autoFocus
                         type="email"
                         value={this.state.email}
                         onChange={this.handleEmailChange}
                     />
-                    <label>Password</label>
+                    <label>رمز عبور</label>
                     <input
                         value={this.state.password}
                         onChange={this.handlePasswordChange}
                         type="password"
                     />
-                    <label>Confirm Password</label>
+                    <label>تکرار رمز عبور</label>
                     <input
                         value={this.state.confirmPassword}
                         onChange={this.handleConfirmPasswordChange}
@@ -81,7 +81,7 @@ export default class Register extends Component {
                         className='nav button-nav'
                         disabled={!this.validateForm()}
                         type="submit"
-                    >Register</button>
+                    >ثبت نام</button>
                 </form>
             </div>
         );

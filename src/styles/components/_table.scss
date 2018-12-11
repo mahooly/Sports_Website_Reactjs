@@ -1,0 +1,23 @@
+#league-games {
+  float: right;
+  border-collapse: collapse;
+  width: 100%;
+  margin: $m-size;
+}
+
+#league-games td, #league-games th {
+  border: 1px solid lighten($gray, 50%);
+  padding: 8px;
+}
+
+#league-games tr:nth-child(even){background-color: $off-white;}
+
+#league-games tr:nth-child(odd):hover {background-color: lighten($gray, 60%);}
+#league-games tr:nth-child(even):hover {background-color: darken($off-white, 10%);}
+
+#league-games th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: darken($off-white, 40%);
+  color: white;
+}

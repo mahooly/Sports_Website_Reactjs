@@ -23,7 +23,7 @@ const TeamPage = (props) => (
             <div label="اعضای تیم">
                 {props.team.players.map((player) => {
                     return (
-                        <div key={player.name}>
+                        <div key={player.name} className='player'>
                             <p>
                                 <Link to={`/player/${player.name}`}>
                                     {player.name}

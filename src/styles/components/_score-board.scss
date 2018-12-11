@@ -13,6 +13,10 @@
   margin: 0;
 }
 
+#league-games ~ .score-board {
+  border: 1px solid lighten($gray, 50%);
+}
+
 .score-item {
   background: white;
   border: none;

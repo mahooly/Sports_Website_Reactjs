@@ -15,12 +15,18 @@
   justify-content: space-between;
   padding: $l-size $m-size;
   color: white;
-  font-weight: 500;
+  font-weight: bold;
   font-size: $m-size;
   margin: 0 $xl-size;
   word-break: break-all;
 }
 
 .league-page {
-
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
