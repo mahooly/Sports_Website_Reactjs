@@ -5,7 +5,7 @@ import News from './News';
 
 const PlayerPage = (props) => (
     <div className='news-page'>
-        <div className='news-item'>
+        <div className='player'>
             <p>{props.player.name}</p>
             <p>{props.player.height} m</p>
             <p>{props.player.weight} kg</p>

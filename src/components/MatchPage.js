@@ -12,12 +12,12 @@ const MatchPage = (props) => {
     const news = props.news.filter((article) => article.tags.includes(teamOne.name) && article.tags.includes(teamTwo.name) && moment(article.date).isAfter(begin) && moment(article.date).isBefore(end));
     const timeline = props.match.events.sort((a,b) => {return a.time > b.time ? -1 : 1});
 
-    return (<div>
-        <p>{teamOne.name} {props.match.scoreOne} - {props.match.scoreTwo} {teamTwo.name}</p>
+    return (<div className='team-page'>
+        <h2>{teamOne.name} {props.match.scoreOne} - {props.match.scoreTwo} {teamTwo.name}</h2>
         <Tabs>
-            <div label="تایم لاین">
+            <div label="تایم لاین" className='tab-content'>
                 <table className='table-format'>
-                    {timeline.length && timeline.map((event) => {return (
+                    {timeline.map((event) => {return (
                         <tr>
                             <td>{event.first}</td>
                             <td>{event.time}</td>
@@ -26,7 +26,7 @@ const MatchPage = (props) => {
                     )})}
                 </table>
             </div>
-            <div label="آمار">
+            <div label="آمار" className='tab-content'>
                 <table className='table-format'>
                     <thead>
                     <th><img className='logo' src={teamOne.logo}/></th>
@@ -44,7 +44,7 @@ const MatchPage = (props) => {
                     })}
                 </table>
             </div>
-            <div label="بازیکنان">
+            <div label="بازیکنان"  className='tab-content'>
                 <img className='logo' src={teamOne.logo}/>
                 <table className='table-format'>
                     {props.match.playersOne.map((player) => {
@@ -57,9 +57,8 @@ const MatchPage = (props) => {
                         );
                     })}
                     <tr>
-                        <td>  </td>
-                        <td>بازیکنان ذخیره</td>
                         <td></td>
+                        <td>بازیکنان ذخیره</td>
                     </tr>
                     {props.match.subOne.map((player) => {
                         return (
@@ -85,7 +84,6 @@ const MatchPage = (props) => {
                     <tr>
                         <td>  </td>
                         <td>بازیکنان ذخیره</td>
-                        <td></td>
                     </tr>
                     {props.match.subTwo.map((player) => {
                         return (
