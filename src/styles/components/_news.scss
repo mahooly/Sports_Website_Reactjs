@@ -21,3 +21,10 @@
 .news-item__img {
   float: left;
 }
+
+.news-page {
+  display: flex;
+  background: fixed;
+  margin: 0;
+  padding: $xl-size;
+}

@@ -3,10 +3,18 @@
 }
 
 .score-item {
-  background: $red;
-  border: 1px solid $gray;
-  border-radius: 5px;
+  background: white;
+  border: none;
+  border-bottom: 1px solid $gray;
   padding: $m-size;
-  margin: $m-size;
+  margin: 0 $m-size;
   text-align: center;
+}
+
+.score-item:first-child {
+  margin: $m-size $m-size 0;
+}
+
+.score-item:nth-child(2n) {
+  background: lighten($orange, 20%);
 }

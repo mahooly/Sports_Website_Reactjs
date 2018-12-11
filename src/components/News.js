@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 
 const News = (props) => (
     <div className='news'>
-        <h2>اخبار</h2>
         {props.news.map((article) => {
             return <NewsItem key={article.id} {...article}/>
         })}

@@ -1,15 +1,24 @@
 import React from 'react'
 import {connect} from 'react-redux';
+import fixed_bg from '../../public/images/stadium.png';
+
+const bg = {
+    backgroundImage: `url(${fixed_bg})`
+};
 
 const NewsPage = (props) => (
-    <div>
-        <h3>{props.article.title}</h3>
-        <p>{props.article.date}</p>
-        {props.article.tags.map((tag) => {
-            return <p key={tag}>{tag}</p>
-        })}
-        {props.article.image && <img src={props.article.image}/>}
-        <p>{props.article.text}</p>
+    <div className='news-page' style={bg}>
+        <div className='news'>
+            <div className='news-item__content'>
+                <h3>{props.article.title}</h3>
+                <p>{props.article.date}</p>
+                {props.article.tags.map((tag) => {
+                    return <p key={tag}>{tag}</p>
+                })}
+                <p>{props.article.text}</p>
+            </div>
+            {props.article.image && <img className='news-item__img' src={props.article.image}/>}
+        </div>
     </div>
 );
 

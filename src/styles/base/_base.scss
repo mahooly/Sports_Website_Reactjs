@@ -27,3 +27,23 @@ a {
   margin: 0;
   padding: $s-size;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lighten($blue, 40%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $gray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken($blue, 30%);
+}

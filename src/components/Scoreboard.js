@@ -5,7 +5,7 @@ import Tabs from './Tabs';
 
 const Scoreboard = (props) => (
   <div className='score-board'>
-      <h2>بازی ها</h2>
+      <h2 className='score-item'>بازی ها</h2>
       {props.matches.map((match) => {
           return <ScoreItem key={match.id} {...match}/>
       })}
