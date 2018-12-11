@@ -10,11 +10,12 @@ const bg = {
 const HomePage = () => (
     <div className='home-page' style={bg}>
         <News/>
-        <Tabs className='score-board'>
-            <div label="فوتبال"><Scoreboard type={'football'}/></div>
-            <div label="بسکتبال"><Scoreboard type={'basketball'}/></div>
-        </Tabs>
-
+        <div className='score-board'>
+            <Tabs>
+                <div label="فوتبال"><Scoreboard type={'football'}/></div>
+                <div label="بسکتبال"><Scoreboard type={'basketball'}/></div>
+            </Tabs>
+        </div>
     </div>
 );
 

@@ -3,10 +3,15 @@ import {connect} from 'react-redux';
 import LeagueItem from './LeagueItem';
 import leagueSelector from '../selectors/leagues';
 import LeagueFilter from './LeagueFilter';
+import fixed_bg from '../../public/images/img1.jpg';
+
+const bg = {
+    backgroundImage: `url(${fixed_bg})`
+};
 
 const Leagues = (props) => (
-    <div>
-        <p>صفحه لیگ ها</p>
+    <div className='leagues' style={bg}>
+        <h3>صفحه لیگ ها</h3>
         <LeagueFilter/>
         {props.leagues.map((league) => {
             return <LeagueItem key={league.name} league={league}/>

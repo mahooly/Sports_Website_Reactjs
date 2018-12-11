@@ -14,7 +14,6 @@
 }
 
 .news-item__content {
-  align-content: flex-start;
   flex-grow: 1;
   margin: $xl-size;
 }
@@ -28,6 +27,7 @@
 .news-page {
   display: flex;
   background: lighten($blue, 25%) fixed;
+  min-height: 100vh;
   margin: 0;
   padding: $xl-size;
 }
@@ -37,9 +37,5 @@
   flex-direction: column;
   flex-grow: 1;
   background: white;
-  height: 100%;
-  width: 100%;
-  min-width: 100%;
-  min-height: 100%;
   margin: 0;
 }
