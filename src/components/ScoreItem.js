@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Redirect} from 'react-router-dom';
-import moment from 'moment';
+import moment from 'jalali-moment';
 
 export default class ScoreItem extends React.Component {
 
@@ -11,13 +11,13 @@ export default class ScoreItem extends React.Component {
     };
 
     onClick = () => {
-        this.setState({redirect: true})
+        this.setState({redirect: true});
     };
 
     render() {
         const {id, teamOne, teamTwo, scoreOne, scoreTwo, date} = this.props;
         const matchMoment = moment(date);
-        console.log(matchMoment);
+        matchMoment.locale('fa');
         if (this.state.redirect) {
             return <Redirect push to={`/match/${id}`}/>;
         }
@@ -27,7 +27,7 @@ export default class ScoreItem extends React.Component {
                     <Link to={`/team/${teamOne}`}>{teamOne}</Link> {scoreOne} - {scoreTwo} <Link
                     to={`/team/${teamTwo}`}>{teamTwo}</Link>
                 </p>
-                {matchMoment.format("YY-MMM-DD HH:mm")}
+                {matchMoment.format("MMM-DD HH:mm")}
             </div>
         );
     };

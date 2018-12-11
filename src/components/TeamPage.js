@@ -4,12 +4,15 @@ import {Link} from 'react-router-dom';
 import Tabs from './Tabs';
 import News from './News';
 import Scoreboard from './Scoreboard';
+import MatchFilter from './MatchFilter';
+import selectMatches from '../selectors/matches';
 
 const TeamPage = (props) => (
     <div>
         <p>{props.team.name}</p>
         <Tabs>
             <div label="Matches">
+                <MatchFilter/>
                 <Scoreboard matches={props.matches}/>
             </div>
             <div label="News">
@@ -35,7 +38,7 @@ const TeamPage = (props) => (
 const mapStateToProps = (state, props) => {
     return {
         team: state.teams.find((team) => team.name === props.match.params.name),
-        matches: state.matches.filter((match) => match.teamOne === props.match.params.name || match.teamTwo === props.match.params.name),
+        matches: selectMatches(state.matches, props.match.params.name, state.filters),
         news: state.news.filter((article) => article.tags.includes(props.match.params.name))
     };
 };
