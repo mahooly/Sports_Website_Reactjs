@@ -48,21 +48,47 @@ store.dispatch(addMatch({
     teamOne: 'Manchester United',
     teamTwo: 'Atletico Madrid',
     scoreOne: '1',
-    scoreTwo: '0'
+    scoreTwo: '0',
+    league: 'Champions League 2018',
+    logoOne: './public/images/5-98x98.png',
+    logoTwo: './public/images/6-98x98.png',
+    winOne: 1,
+    winTwo: 0,
+    date: 1234567890
 }));
 store.dispatch(addMatch({
     type: 'football',
     teamOne: 'Liverpool',
     teamTwo: 'Atletico Madrid',
     scoreOne: '0',
-    scoreTwo: '0'
+    scoreTwo: '0',
+    league: 'Champions League 2018',
+    logoOne: './public/images/5-98x98.png',
+    logoTwo: './public/images/6-98x98.png',
+    winOne: 0,
+    winTwo: 0
 }));
+
+store.dispatch(addMatch({
+    type: 'football',
+    teamOne: 'Barcelona',
+    teamTwo: 'Atletico Madrid',
+    scoreOne: '1',
+    scoreTwo: '2',
+    league: 'Champions League 2018',
+    logoOne: './public/images/5-98x98.png',
+    logoTwo: './public/images/6-98x98.png',
+    winOne: 0,
+    winTwo: 1
+}));
+
 store.dispatch(addPlayer({name: 'David de Gea', positions: 'goalKeeper', height: 1.92, teams: ['Manchester United']}));
 store.dispatch(addLeague({
     name: 'Champions League 2018',
     isOngoing: true,
     startDate: moment().toDate(),
-    type: 'football'
+    type: 'football',
+    teams: [{name: 'Manchester United', matches: 12, points: 31}, {name: 'Atletico Madrid', matches: 12, points: 24}]
 }));
 
 const jsx = (

@@ -6,7 +6,8 @@ export const addLeague = (
         isOngoing = true,
         image = '',
         type = '',
-        startDate = 0
+        startDate = 0,
+        teams = []
     } = {}
 ) => ({
     type: 'ADD_LEAGUE',
@@ -16,7 +17,8 @@ export const addLeague = (
         isOngoing,
         image,
         type,
-        startDate
+        startDate,
+        teams
     }
 });
 

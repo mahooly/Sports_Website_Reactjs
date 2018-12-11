@@ -11,7 +11,11 @@ export const addMatch = (
         statsTwo = [],
         hasCommentary = false,
         league = '',
-        date = 0
+        date = 0,
+        logoOne = '',
+        logoTwo = '',
+        winOne = 0,
+        winTwo = 0
     } = {}
 ) => ({
     type: 'ADD_MATCH',
@@ -25,7 +29,12 @@ export const addMatch = (
         statsOne,
         statsTwo,
         hasCommentary,
-        date
+        league,
+        date,
+        logoOne,
+        logoTwo,
+        winOne,
+        winTwo
     }
 });
 
