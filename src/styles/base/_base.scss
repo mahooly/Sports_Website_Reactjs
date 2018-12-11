@@ -1,24 +1,32 @@
 html {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
   font-size: 62.5%;
+  direction: rtl;
 }
 
-body {
+body, .container {
   font-family: B Lotus, B Nazanin, sans-serif;
   font-size: $m-size;
-  direction: rtl;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 button {
   cursor: pointer;
 }
 
-button:disabled {
-  cursor: default;
-}
-
 a {
   text-decoration: none;
   color: black;
+  cursor: pointer;
+}
+
+.tab-list-item {
   cursor: pointer;
 }
 

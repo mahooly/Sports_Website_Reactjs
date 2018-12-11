@@ -1,20 +1,17 @@
 .score-board {
-  float: left;
+  width: 45%;
+  margin: $m-size;
+  border: 1px solid lighten($gray, 50%);
 }
 
 .score-item {
   background: white;
   border: none;
-  border-bottom: 1px solid $gray;
   padding: $m-size;
-  margin: 0 $m-size;
   text-align: center;
-}
-
-.score-item:first-child {
-  margin: $m-size $m-size 0;
+  margin: 0;
 }
 
 .score-item:nth-child(2n) {
-  background: lighten($orange, 20%);
+  background: lighten($gray, 50%);
 }

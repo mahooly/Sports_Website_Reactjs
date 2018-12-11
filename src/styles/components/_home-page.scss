@@ -1,6 +1,7 @@
 .home-page {
-  background: fixed;
+  background-attachment: fixed;
   display: flex;
+  align-items: flex-start;
   margin: 0;
   padding: 0 $m-size;
 }

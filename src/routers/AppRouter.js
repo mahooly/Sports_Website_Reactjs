@@ -13,7 +13,7 @@ import Register from "../components/Register";
 
 const AppRouter = () => (
     <BrowserRouter>
-        <div>
+        <div className='container'>
             <Header />
             <Switch>
                 <Route exact path="/" component={HomePage} />

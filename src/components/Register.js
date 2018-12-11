@@ -1,5 +1,10 @@
 import React, {Component} from "react";
 import {Redirect} from 'react-router-dom';
+import fixed_bg from '../../public/images/stadium.png';
+
+const bg = {
+    backgroundImage: `url(${fixed_bg})`
+};
 
 export default class Register extends Component {
     constructor(props) {
@@ -51,8 +56,8 @@ export default class Register extends Component {
             return <Redirect push to="/"/>;
         }
         return (
-            <div className="Signup">
-                <form onSubmit={this.handleSubmit}>
+            <div className="Signup" style={bg}>
+                <form className='form-submission' onSubmit={this.handleSubmit}>
                     <label>Email</label>
                     <input
                         autoFocus
@@ -73,6 +78,7 @@ export default class Register extends Component {
                         type="password"
                     />
                     <button
+                        className='nav button-nav'
                         disabled={!this.validateForm()}
                         type="submit"
                     >Register</button>

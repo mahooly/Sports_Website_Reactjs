@@ -66,7 +66,7 @@ store.dispatch(addLeague({
 }));
 
 const jsx = (
-    <Provider store={store}>
+    <Provider store={store} className='container'>
         <AppRouter/>
     </Provider>
 );

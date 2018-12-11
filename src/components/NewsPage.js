@@ -8,7 +8,7 @@ const bg = {
 
 const NewsPage = (props) => (
     <div className='news-page' style={bg}>
-        <div className='news'>
+        <div className='news-item'>
             <div className='news-item__content'>
                 <h3>{props.article.title}</h3>
                 <p>{props.article.date}</p>

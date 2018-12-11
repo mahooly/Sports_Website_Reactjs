@@ -1,4 +1,9 @@
 import React, {Component} from "react";
+import fixed_bg from '../../public/images/stadium.png';
+
+const bg = {
+    backgroundImage: `url(${fixed_bg})`
+};
 
 export default class Login extends Component {
     constructor(props) {
@@ -34,8 +39,8 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className="Login">
-                <form onSubmit={this.handleSubmit}>
+            <div className="Login" style={bg}>
+                <form className='form-submission' onSubmit={this.handleSubmit}>
                     <label>Email </label>
                     <input
                         autoFocus
@@ -50,6 +55,7 @@ export default class Login extends Component {
                         type="password"
                     />
                     <button
+                        className='nav button-nav'
                         disabled={!this.validateForm()}
                         type="submit"
                     >

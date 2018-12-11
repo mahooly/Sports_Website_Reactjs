@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NewsItem = ({ id, title, description, image, date, tags}) => (
     <div className='news-item'>
+        {image && <img className='news-item__img' src={image}/>}
         <div className='news-item__content'>
             <Link to={`/news/${id}`}>
                 <h3>{title}</h3>
@@ -12,9 +13,6 @@ const NewsItem = ({ id, title, description, image, date, tags}) => (
                 return <p key={tag}>{tag}</p>
             })}
             <p>{description}</p>
-        </div>
-        <div className='news-item__img'>
-            {image && <img src={image}/>}
         </div>
     </div>
 );
