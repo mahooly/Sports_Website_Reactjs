@@ -72,12 +72,12 @@ store.dispatch(addMatch({
     type: 'football',
     teamOne: 'منچستر یونایتد',
     teamTwo: 'والنسیا',
-    scoreOne: '',
-    scoreTwo: '',
+    scoreOne: '3',
+    scoreTwo: '1',
     league: 'لیگ قهرمانان 2018',
     logoOne: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFTCyJO9pUjFjg9nwzRfg8-l8DSzATV4Wariqcr3lVuMn4NOgxRA',
     logoTwo: 'http://localhost:8080/images/220px-Valenciacf.svg.png',
-    winOne: 0,
+    winOne: 1,
     winTwo: 0,
     date: moment("2018-12-12 23:30", "YYYY-MM-DD HH:mm").valueOf(),
     pointOne: 3,
@@ -104,7 +104,6 @@ store.dispatch(addMatch({
     subOne: [{name: 'پل پوگبا', position: 'هافبک'}],
     subTwo: [{name: 'آلکساندر لاکازت', position: 'مهاجم'}]
 }));
-
 store.dispatch(addMatch({
     type: 'football',
     teamOne: 'بارسلونا',
@@ -116,6 +115,7 @@ store.dispatch(addMatch({
     logoTwo: 'http://localhost:8080/images/6-98x98.png',
     winOne: 0,
     winTwo: 1,
+    date: moment('2018-12-12 12:30').valueOf(),
     pointOne: 1,
     pointTwo: 3
 }));

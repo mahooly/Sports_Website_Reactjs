@@ -26,6 +26,8 @@ class PlayerFilter extends React.Component {
                             }
                             else if (e.target.value === 'دروازه بان') {
                                 this.props.dispatch(setTextFilter(e.target.value));
+                            } else {
+                                this.props.dispatch(setTextFilter(''));
                             }
                         }}
                     >
@@ -47,6 +49,8 @@ class PlayerFilter extends React.Component {
                             }
                             else if (e.target.value === 'سنتر') {
                                 this.props.dispatch(setTextFilter(e.target.value));
+                            } else {
+                                this.props.dispatch(setTextFilter(''));
                             }
                         }}
                     >

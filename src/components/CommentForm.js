@@ -38,7 +38,7 @@ class CommentForm extends React.Component {
                     <br/>
                     <div className="field">
                         <div className="control">
-                            <textarea className="textarea" name="comment" placeholder="نظر خود را بنویسید"> </textarea>
+                            <textarea className="textarea" name="comment" placeholder="نظر خود را بنویسید"/>
                         </div>
                     </div>
                     <div className="field">
