@@ -16,12 +16,15 @@ const store = configureStore();
 
 store.dispatch(addArticle(
     {
-        description: 'یه چیزی',
-        title: 'بلاه',
+        description: 'من یونایتد فصل بعد قصد دارد برای جذب دو ستاره اتلتیکو مادرید اقدام کند.',
+        title: '2 ستاره اتلتیکو در تیررس منچستریونایتد',
         image: '',
         date: 1234567890,
         tags: ['منچستر یونایتد', 'اتلتیکو مادرید'],
-        text: 'هعی'
+        text: 'یونایتد تابستان امسال تلاش زیادی کرد تا گریزمان را از اتلتیکو به خدمت بگیرد و تقریبا همه چیز هم نهایی شده بود؛ ولی رد فرجام خواهی اتلتیکو و پابرجا ماندن محرومیت این باشگاه از خرید بازیکن سبب شد گریزمان قید جدایی را بزند.\n' +
+            '\n' +
+            'پس از آن بود که شیاطین سرخ برای جذب موراتا و لوکاکو اقدام کردند و در نهایت موفق به جذب لوکاکو شدند.',
+        type: 'فوتبال'
     }));
 store.dispatch(addArticle(
     {
@@ -30,7 +33,8 @@ store.dispatch(addArticle(
         image: 'https://cdn.vox-cdn.com/thumbor/_6oPObR4h3lpVWMQo1Me-K7Fl4U=/0x0:4689x3165/1200x800/filters:focal(2281x710:3031x1460)/cdn.vox-cdn.com/uploads/chorus_image/image/55406533/686448602.0.jpg',
         date: 100,
         tags: ['هری کین'],
-        text: 'هری کین در جام جهانی کفش طلا را گرفت'
+        text: 'هری کین در جام جهانی کفش طلا را گرفت',
+        type: 'فوتبال'
     }));
 
 store.dispatch(addTeam({
@@ -88,7 +92,7 @@ store.dispatch(addMatch({
     winTwo: 0,
     pointOne: 2,
     pointTwo: 2,
-    date: moment('2018-12-5 23:30').valueOf(),
+    date: moment('2018-12-12 18:30').valueOf(),
     stats: [{first: 44, name: 'درصد مالکیت توپ', second: 56}, {first: 7, name: 'موقعیت گل', second: 4}, {first: 447, second: 545, name: 'تعداد پاس ها'}],
     events: [{time: '0', first: 'شروع بازی', second: 'شروع بازی'}, {time: '26', second: 'گل!'}],
     playersOne: [{name: 'داوید دخیا', position: 'دروازه بان'}, {name: 'جسی لینگارد', position: 'هافبک', change: '60'}, {name: 'مارکوس رشفورد', position: 'مهاجم'}],
@@ -112,8 +116,8 @@ store.dispatch(addMatch({
     pointTwo: 3
 }));
 
-store.dispatch(addPlayer({name: 'داوید دخیا', height: 1.92, weight: 82, teams: [{name:'منچستر یونایتد', position: 'دروازه بان', number: 1}], image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/02/22/16/de-gea-cl-2.jpg?w968h681'}));
-store.dispatch(addPlayer({name: 'جسی لینگارد', height: 1.75, weight: 65, teams: [{name:'منچستر یونایتد', position: 'هافبک', number: 14}], image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxOsN7Y_yc5rJt7Aa02rs-q5IejiTFvsMklg0YpRB_PfxqsbAC', stats: [{name: 'پریمیر لیگ 2018', stats: [{name: ' بازی ها', value: '12'}, {name: 'گل ها', value: '1'}, {name: 'کارت زرد', value: '0'}, {name: 'کارت قرمز', value: '0'}]}]}));
+store.dispatch(addPlayer({name: 'داوید دخیا', height: 1.92, weight: 82, nationality: 'اسپانیایی', teams: [{name:'منچستر یونایتد', position: 'دروازه بان', number: 1}], image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/02/22/16/de-gea-cl-2.jpg?w968h681'}));
+store.dispatch(addPlayer({name: 'جسی لینگارد', height: 1.75, weight: 65, nationality: 'انگلیسی', teams: [{name:'منچستر یونایتد', position: 'هافبک', number: 14}], image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxOsN7Y_yc5rJt7Aa02rs-q5IejiTFvsMklg0YpRB_PfxqsbAC', stats: [{name: 'پریمیر لیگ 2018', stats: [{name: ' بازی ها', value: '12'}, {name: 'گل ها', value: '1'}, {name: 'کارت زرد', value: '0'}, {name: 'کارت قرمز', value: '0'}]}]}));
 store.dispatch(addLeague({
     name: 'لیگ قهرمانان 2018',
     isOngoing: true,
@@ -123,7 +127,49 @@ store.dispatch(addLeague({
     logo: 'https://static.vecteezy.com/system/resources/previews/000/064/610/non_2x/uefa-champions-league-vector.jpg',
     bg_image: 'http://localhost:8080/images/img-03_003.jpg'
 }));
-
+store.dispatch(addTeam({
+    name: 'لس آنجلس لیکرز',
+    type: 'basketball',
+    players: [{name: 'لبران جیمز', position: 'فوروارد', image: 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2544.png'}, {name: 'برندن اینگرام', position: 'فوروارد', image: 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1627742.png'}],
+    logo: 'http://mena-en.global.nba.com/media/img/teams/00/logos/LAL_logo.svg'
+}));
+store.dispatch(addPlayer({name: 'لبران جیمز', height: 2.03, weight: 113.4, teams: [{name:'لس آنجلس لیکرز', position: 'فوروارد', number: 23}], image: 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2544.png'}));
+store.dispatch(addPlayer({name: 'برندن اینگرام', height: 2.06, weight: 86.2, teams: [{name:'لس آنجلس لیکرز', position: 'فوروارد', number: 14}], image: 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1627742.png'}));
+store.dispatch(addTeam({
+    name: 'میامی هیت',
+    type: 'basketball',
+    players: [{name: 'حسن وایت ساید', position: 'سنتر', image: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202355.png'}, {name: 'دواین وید', position: 'گارد', image: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2548.png'}],
+    logo: 'http://mena-en.global.nba.com/media/img/teams/00/logos/MIA_logo.svg'
+}));
+store.dispatch(addPlayer({name: 'حسن وایت ساید', height: 2.13, weight: 120.2, teams: [{name:'میامی هیت', position: 'سنتر', number: 21}], image: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202355.png'}));
+store.dispatch(addPlayer({name: 'دواین وید', height: 1.93, weight: 99.8, teams: [{name:'میامی هیت', position: 'گارد', number: 3}], image: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2548.png'}));
+store.dispatch(addMatch({
+    type: 'basketball',
+    teamOne: 'لس آنجلس لیکرز',
+    teamTwo: 'میامی هیت',
+    scoreOne: '105',
+    scoreTwo: '108',
+    league: 'NBA',
+    logoOne: 'http://mena-en.global.nba.com/media/img/teams/00/logos/LAL_logo.svg',
+    logoTwo: 'http://mena-en.global.nba.com/media/img/teams/00/logos/MIA_logo.svg',
+    winOne: 0,
+    winTwo: 1,
+    pointOne: 105,
+    pointTwo: 108,
+    date: moment('2018-12-12 4:30').valueOf(),
+    stats: [{first: 43.8, name: 'درصد پرتاب سه امتیازی', second: 42.4}, {first: 46, name: 'ریباند', second: 50}],
+    events: [{time: '0', first: 'شروع بازی', second: 'شروع بازی'}, {time: '15', second: 'پرتاب دو امتیازی از لنس استیونسون'}],
+    playersOne: [{name: 'لبران جیمز', position: 'فوروارد'}, {name: 'برندن اینگرام', position: 'فوروارد'}],
+    playersTwo: [{name: 'حسن وایت ساید', position: 'سنتر'}, {name: 'دواین وید', position: 'گارد'}],
+}));
+store.dispatch(addLeague({
+    name: 'NBA',
+    isOngoing: true,
+    startDate: moment().valueOf(),
+    type: 'basketball',
+    teams: [{name: 'لس آنجلس لیکرز', matches: 12, points: 113.1}, {name: 'میامی هیت', matches: 10, points: 108.1}],
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEivMFwW4quseIOUDmtS4dy-qEeWBLU1QQP9sbqBVi15iajTqotK60ziU'
+}));
 const jsx = (
     <Provider store={store} className='container'>
         <AppRouter/>

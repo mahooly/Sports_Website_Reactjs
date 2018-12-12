@@ -39,3 +39,26 @@
   background: white;
   margin: 0;
 }
+
+.news-item__date {
+  font-size: smaller;
+  color: gray;
+}
+
+.news-item__tag-holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.news-item__tag {
+  padding: 3px;
+  margin: 0 0 0 5px;
+  background-color: lighten(gray, 40%);
+  color: darken(gray, 5%);
+  border: none;
+  border-radius: 7px;
+  max-width: fit-content;
+  max-height: fit-content;
+  font-size: smaller;
+  float: left;
+}

@@ -5,6 +5,8 @@ import matchesReducer from '../reducers/matches';
 import playersReducer from '../reducers/players';
 import leaguesReducer from '../reducers/leagues';
 import filtersReducer from '../reducers/filters';
+import commentsReducer from '../reducers/comments';
+
 export default () => {
     const store = createStore(
         combineReducers({
@@ -13,7 +15,8 @@ export default () => {
             matches: matchesReducer,
             players: playersReducer,
             leagues : leaguesReducer,
-            filters: filtersReducer
+            filters: filtersReducer,
+            comments: commentsReducer
         }),
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     );
