@@ -1,6 +1,8 @@
-export default (leagues, {text}) => {
+export default (leagues, {text, year}) => {
     return leagues.filter((league) => {
-        return league.name.toLowerCase().includes(text.toLowerCase());
+        const leagueName = text ? league.name.toLowerCase().includes(text.toLowerCase()) : true;
+        const leagueYear = year ? league.startDate === year : true;
+        return leagueName && leagueYear;
     }).sort((a, b) => {
         return a.startDate < b.startDate ? 1 : -1;
     });

@@ -24,8 +24,7 @@ export default class ScoreItem extends React.Component {
         return (
             <div className='score-item' onClick={this.onClick}>
                 <p>
-                    <img className='logo' src={logoOne}/><Link to={`/team/${teamOne}`}>{teamOne}</Link> {scoreOne} - {scoreTwo}
-                    <Link to={`/team/${teamTwo}`}>{teamTwo}</Link><img className='logo' src={logoTwo}/>
+                    <img className='logo' src={logoOne}/><Link to={`/team/${teamOne}`}>{teamOne}</Link> {scoreOne} - {scoreTwo} <Link to={`/team/${teamTwo}`}>{teamTwo}</Link><img className='logo' src={logoTwo}/>
                 </p>
                 {matchMoment.format("DD MMM - HH:mm ")}
             </div>

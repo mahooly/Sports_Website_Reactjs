@@ -70,7 +70,7 @@ store.dispatch(addMatch({
     teamTwo: 'والنسیا',
     scoreOne: '',
     scoreTwo: '',
-    league: 'لیگ قهرمانان 2018',
+    league: 'لیگ قهرمانان',
     logoOne: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFTCyJO9pUjFjg9nwzRfg8-l8DSzATV4Wariqcr3lVuMn4NOgxRA',
     logoTwo: 'http://localhost:8080/images/220px-Valenciacf.svg.png',
     winOne: 0,
@@ -85,7 +85,7 @@ store.dispatch(addMatch({
     teamTwo: 'آرسنال',
     scoreOne: '2',
     scoreTwo: '2',
-    league: 'پریمیر لیگ 2018',
+    league: 'پریمیر لیگ',
     logoOne: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFTCyJO9pUjFjg9nwzRfg8-l8DSzATV4Wariqcr3lVuMn4NOgxRA',
     logoTwo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDTpIlwQ9j-QMdFLRX6UABw34zu71CPWXlgGmjGs0-3PJ_qcC',
     winOne: 0,
@@ -107,7 +107,7 @@ store.dispatch(addMatch({
     teamTwo: 'اتلتیکو مادرید',
     scoreOne: '1',
     scoreTwo: '2',
-    league: 'لیگ قهرمانان 2018',
+    league: 'لیگ قهرمانان',
     logoOne: 'http://localhost:8080/images/5-98x98.png',
     logoTwo: 'http://localhost:8080/images/6-98x98.png',
     winOne: 0,
@@ -119,11 +119,29 @@ store.dispatch(addMatch({
 store.dispatch(addPlayer({name: 'داوید دخیا', height: 1.92, weight: 82, nationality: 'اسپانیایی', teams: [{name:'منچستر یونایتد', position: 'دروازه بان', number: 1}], image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/02/22/16/de-gea-cl-2.jpg?w968h681'}));
 store.dispatch(addPlayer({name: 'جسی لینگارد', height: 1.75, weight: 65, nationality: 'انگلیسی', teams: [{name:'منچستر یونایتد', position: 'هافبک', number: 14}], image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxOsN7Y_yc5rJt7Aa02rs-q5IejiTFvsMklg0YpRB_PfxqsbAC', stats: [{name: 'پریمیر لیگ 2018', stats: [{name: ' بازی ها', value: '12'}, {name: 'گل ها', value: '1'}, {name: 'کارت زرد', value: '0'}, {name: 'کارت قرمز', value: '0'}]}]}));
 store.dispatch(addLeague({
-    name: 'لیگ قهرمانان 2018',
+    name: 'لیگ قهرمانان',
     isOngoing: true,
-    startDate: moment().millisecond(),
+    startDate: '2018',
     type: 'football',
-    teams: [{name: 'منچستر یونایتد', matches: 12, points: 31}, {name: 'اتلتیکو مادرید', matches: 12, points: 24}],
+    teams: [{name: 'منچستر یونایتد', matches: 12, points: 31}, {name: 'والنسیا', matches: 12, points: 24}],
+    logo: 'https://static.vecteezy.com/system/resources/previews/000/064/610/non_2x/uefa-champions-league-vector.jpg',
+    bg_image: 'http://localhost:8080/images/img-03_003.jpg'
+}));
+store.dispatch(addLeague({
+    name: 'لیگ قهرمانان',
+    isOngoing: false,
+    startDate: '2017',
+    type: 'football',
+    teams: [{name: 'منچستر یونایتد', matches: 12, points: 28}, {name: 'اتلتیکو مادرید', matches: 12, points: 20}],
+    logo: 'https://static.vecteezy.com/system/resources/previews/000/064/610/non_2x/uefa-champions-league-vector.jpg',
+    bg_image: 'http://localhost:8080/images/img-03_003.jpg'
+}));
+store.dispatch(addLeague({
+    name: 'پریمیر لیگ',
+    isOngoing: true,
+    startDate: '2018',
+    type: 'football',
+    teams: [{name: 'منچستر یونایتد', matches: 12, points: 31}, {name: 'آرسنال', matches: 12, points: 24}],
     logo: 'https://static.vecteezy.com/system/resources/previews/000/064/610/non_2x/uefa-champions-league-vector.jpg',
     bg_image: 'http://localhost:8080/images/img-03_003.jpg'
 }));
@@ -165,7 +183,7 @@ store.dispatch(addMatch({
 store.dispatch(addLeague({
     name: 'NBA',
     isOngoing: true,
-    startDate: moment().valueOf(),
+    startDate: '2018',
     type: 'basketball',
     teams: [{name: 'لس آنجلس لیکرز', matches: 12, points: 113.1}, {name: 'میامی هیت', matches: 10, points: 108.1}],
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEivMFwW4quseIOUDmtS4dy-qEeWBLU1QQP9sbqBVi15iajTqotK60ziU'

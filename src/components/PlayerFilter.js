@@ -27,6 +27,9 @@ class PlayerFilter extends React.Component {
                             else if (e.target.value === 'دروازه بان') {
                                 this.props.dispatch(setTextFilter(e.target.value));
                             }
+                            else if (e.target.value === '') {
+                                this.props.dispatch(setTextFilter(e.target.value));
+                            }
                         }}
                     >
                         <option value="">---</option>
@@ -46,6 +49,9 @@ class PlayerFilter extends React.Component {
                                 this.props.dispatch(setTextFilter(e.target.value));
                             }
                             else if (e.target.value === 'سنتر') {
+                                this.props.dispatch(setTextFilter(e.target.value));
+                            }
+                            else if (e.target.value === '') {
                                 this.props.dispatch(setTextFilter(e.target.value));
                             }
                         }}

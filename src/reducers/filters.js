@@ -10,6 +10,11 @@ export default (state = filtersReducerDefaultState, action) => {
                 ...state,
                 text: action.text
             };
+            case 'SET_YEAR_FILTER':
+            return {
+                ...state,
+                year: action.year
+            };
         case 'SORT_BY_POINTS':
             return {
                 ...state,
