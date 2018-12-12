@@ -1,9 +1,12 @@
-export default (matches, text, { sortBy }) => {
+import moment from 'moment';
+
+export default (matches, text, { sortBy, year}) => {
     return matches.filter((match) => {
         const matchOne = match.teamOne.toLowerCase() === text.toLowerCase();
         const matchTwo = match.teamTwo.toLowerCase() === text.toLowerCase();
         const matchLeague = match.league.toLowerCase() === text.toLowerCase();
-        return matchOne || matchTwo || matchLeague;
+        const matchYear = year ? moment(match.date).year() === Number(year) : true;
+        return matchOne || matchTwo || (matchLeague && matchYear);
     }).sort((a, b) => {
 
         if (sortBy === 'date') {
