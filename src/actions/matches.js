@@ -21,7 +21,8 @@ export const addMatch = (
         playersTwo = [],
         subOne = [],
         subTwo = [],
-        events = []
+        events = [],
+        photos = []
     } = {}
 ) => ({
     type: 'ADD_MATCH',
@@ -46,7 +47,8 @@ export const addMatch = (
         playersTwo,
         subOne,
         subTwo,
-        events
+        events,
+        photos
     }
 });
 

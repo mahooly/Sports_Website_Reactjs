@@ -22,11 +22,11 @@ const Leagues = (props) =>  {
         <div className='leagues' style={bg}>
             <h3>صفحه لیگ ها</h3>
             <LeagueFilter/>
-            <h4>لیگ فوتبال</h4>
+            {football.length && <h4>لیگ فوتبال</h4>}
             {football.map((league) => {
                 return <LeagueItem key={league.name} league={league}/>
             })}
-            <h4>لیگ بسکتبال</h4>
+            {basketball.length && <h4>لیگ بسکتبال</h4>}
             {basketball.map((league) => {
                 return <LeagueItem key={league.name} league={league}/>
             })}
