@@ -42,13 +42,23 @@ store.dispatch(addTeam({
 store.dispatch(addTeam({
     name: 'والنسیا',
     type: 'football',
-    players: [{name: 'رودریگو', position: 'مهاجم', image: 'https://files.laliga.es/player-photo/6/18/2700/256x256_008329_000011_049_1_002_000_000.jpg'}, {name: 'دنیس چریشف', position: 'هافبک', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0eGHNt5cCT-9nGw9hVe-aUxMl0rcM4JL3vEUQhFVm0cQqy0rJ'}]
+    players: [{name: 'رودریگو', position: 'مهاجم', image: 'http://localhost:8080/images/220px-Valenciacf.svg.png'}, {name: 'دنیس چریشف', position: 'هافبک', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0eGHNt5cCT-9nGw9hVe-aUxMl0rcM4JL3vEUQhFVm0cQqy0rJ'}]
 }));
 store.dispatch(addTeam({
     name: 'آرسنال',
     type: 'football',
     players: [{name: 'آلکساندر لاکازت', position: 'مهاجم', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFhCeLTFxWaCqDIqLPyL98WK2Q3iGl0YXuBHf4C9XqPYvNqD7c'}, {name: 'آرون رمزی', position: 'هافبک', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4FP0qOK-tFL9dYnj8XjNk_oEtzQUE8D1b0yi2vPx5a8iIoVZTrg'}],
     logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDTpIlwQ9j-QMdFLRX6UABw34zu71CPWXlgGmjGs0-3PJ_qcC'
+}));
+store.dispatch(addTeam({
+    name: 'بارسلونا',
+    type: 'football',
+    logo: 'http://localhost:8080/images/5-98x98.png'
+}));
+store.dispatch(addTeam({
+    name: 'اتلتیکو مادرید',
+    type: 'football',
+    logo: 'http://localhost:8080/images/6-98x98.png'
 }));
 store.dispatch(addMatch({
     type: 'football',
@@ -58,7 +68,7 @@ store.dispatch(addMatch({
     scoreTwo: '',
     league: 'لیگ قهرمانان 2018',
     logoOne: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFTCyJO9pUjFjg9nwzRfg8-l8DSzATV4Wariqcr3lVuMn4NOgxRA',
-    logoTwo: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Valenciacf.svg/220px-Valenciacf.svg.png',
+    logoTwo: 'http://localhost:8080/images/220px-Valenciacf.svg.png',
     winOne: 0,
     winTwo: 0,
     date: moment('2018-12-12 23:30').milliseconds(),
@@ -94,8 +104,8 @@ store.dispatch(addMatch({
     scoreOne: '1',
     scoreTwo: '2',
     league: 'لیگ قهرمانان 2018',
-    logoOne: './public/images/5-98x98.png',
-    logoTwo: './public/images/6-98x98.png',
+    logoOne: 'http://localhost:8080/images/5-98x98.png',
+    logoTwo: 'http://localhost:8080/images/6-98x98.png',
     winOne: 0,
     winTwo: 1,
     pointOne: 1,
@@ -109,7 +119,8 @@ store.dispatch(addLeague({
     startDate: moment().millisecond(),
     type: 'football',
     teams: [{name: 'منچستر یونایتد', matches: 12, points: 31}, {name: 'اتلتیکو مادرید', matches: 12, points: 24}],
-    image: 'https://www.freevector.com/uploads/vector/preview/11403/FreeVector-UEFA-Champions-League.jpg'
+    logo: 'https://static.vecteezy.com/system/resources/previews/000/064/610/non_2x/uefa-champions-league-vector.jpg',
+    bg_image: 'http://localhost:8080/images/img-03_003.jpg'
 }));
 
 const jsx = (

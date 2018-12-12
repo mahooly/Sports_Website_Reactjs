@@ -1,7 +1,7 @@
 .table-format {
   float: right;
   border-collapse: collapse;
-  width: 100%;
+  flex-grow: 1;
   margin: $m-size;
 }
 
@@ -10,6 +10,7 @@
   padding: 8px;
 }
 
+.table-format tr:nth-child(odd){background-color: lighten($off-white,20%);}
 .table-format tr:nth-child(even){background-color: $off-white;}
 
 .table-format tr:nth-child(odd):hover {background-color: lighten($gray, 60%);}

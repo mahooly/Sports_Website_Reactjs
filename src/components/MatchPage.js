@@ -14,11 +14,16 @@ const MatchPage = (props) => {
     const timeline = props.match.events.sort((a,b) => {return a.time > b.time ? -1 : 1});
 
     return (<div className='team-page'>
-        <h2><Link to={`/team/${teamOne.name}`}><img src={teamOne.logo}/>{teamOne.name}</Link> {props.match.scoreOne} - {props.match.scoreTwo} <Link
-            to={`/team/${teamTwo.name}`}><img src={teamTwo.logo}/>{teamTwo.name}</Link></h2>
+        <h2><img className='logo' src={teamOne.logo}/><Link to={`/team/${teamOne.name}`}>{teamOne.name}</Link> {props.match.scoreOne} - {props.match.scoreTwo} <Link
+            to={`/team/${teamTwo.name}`}>{teamTwo.name}</Link><img className='logo' src={teamTwo.logo}/></h2>
         <Tabs>
             <div label="تایم لاین" className='tab-content'>
                 <table className='table-format'>
+                    <thead>
+                    <th><img className='logo' src={teamOne.logo}/></th>
+                    <th>زمان (دقیقه)</th>
+                    <th><img className='logo' src={teamTwo.logo}/></th>
+                    </thead>
                     {timeline.length === 0 ? <p>بازی هنوز شروع نشده است.</p>: timeline.map((event) => {return (
                         <tr>
                             <td>{event.first}</td>
@@ -33,7 +38,7 @@ const MatchPage = (props) => {
                     <thead>
                     <th><img className='logo' src={teamOne.logo}/></th>
                     <th>آمار بازی</th>
-                    <th><img className='logo' src={teamOne.logo}/></th>
+                    <th><img className='logo' src={teamTwo.logo}/></th>
                     </thead>
                     {props.match.stats.map((stat) => {
                         return (
@@ -49,6 +54,10 @@ const MatchPage = (props) => {
             <div label="بازیکنان"  className='tab-content'>
                 <img className='logo' src={teamOne.logo}/>
                 <table className='table-format'>
+                    <thead>
+                    <th>نام بازیکن</th>
+                    <th>نقش</th>
+                    </thead>
                     {props.match.playersOne.map((player) => {
                         return (
                             <tr>
@@ -59,8 +68,8 @@ const MatchPage = (props) => {
                         );
                     })}
                     <tr>
-                        <td></td>
-                        <td>بازیکنان ذخیره</td>
+                        <th>بازیکنان ذخیره</th>
+                        <th> </th>
                     </tr>
                     {props.match.subOne.map((player) => {
                         return (
@@ -74,6 +83,10 @@ const MatchPage = (props) => {
                 </table>
                 <img className='logo' src={teamTwo.logo}/>
                 <table className='table-format'>
+                    <thead>
+                    <th>نام بازیکن</th>
+                    <th>نقش</th>
+                    </thead>
                     {props.match.playersTwo.map((player) => {
                         return (
                             <tr>
@@ -84,8 +97,8 @@ const MatchPage = (props) => {
                         );
                     })}
                     <tr>
-                        <td>  </td>
-                        <td>بازیکنان ذخیره</td>
+                        <th>بازیکنان ذخیره</th>
+                        <th>  </th>
                     </tr>
                     {props.match.subTwo.map((player) => {
                         return (
@@ -97,7 +110,6 @@ const MatchPage = (props) => {
                         );
                     })}
                 </table>
-
             </div>
 
             <div label="اخبار">

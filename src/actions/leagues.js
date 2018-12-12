@@ -4,10 +4,11 @@ export const addLeague = (
     {
         name = '',
         isOngoing = true,
-        image = '',
+        bg_image = '',
         type = '',
         startDate = 0,
-        teams = []
+        teams = [],
+        logo = ''
     } = {}
 ) => ({
     type: 'ADD_LEAGUE',
@@ -15,10 +16,11 @@ export const addLeague = (
         id: uuid(),
         name,
         isOngoing,
-        image,
+        bg_image,
         type,
         startDate,
-        teams
+        teams,
+        logo
     }
 });
 

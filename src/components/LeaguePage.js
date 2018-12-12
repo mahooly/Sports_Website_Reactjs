@@ -5,15 +5,14 @@ import Scoreboard from './Scoreboard';
 import TeamFilter from './TeamFilter';
 import teamSelector from '../selectors/teams';
 import {Link} from 'react-router-dom';
-import fixed_bg from '../../public/images/img1.jpg';
 
-const bg = {
-    backgroundImage: `url(${fixed_bg})`
-};
+const bg = (props) => ({
+    backgroundImage: `url(${props.league.bg_image})`
+});
 
 const LeaguePage = (props) => (
-    <div className='league-page' style={bg}>
-        <h2>{props.league.name}</h2>
+    <div className='league-page' style={bg(props)}>
+        <h2>{props.league.logo && <img className='logo' src={props.league.logo}/>}{props.league.name}</h2>
         <div  className='home-page'>
             <TeamFilter/>
             <table className='table-format'>
