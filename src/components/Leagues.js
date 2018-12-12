@@ -13,7 +13,6 @@ const Leagues = (props) =>  {
     const oldLeagues = props.leagues.filter((league) => !league.isOngoing).sort((a, b) => {
         return a.startDate > b.startDate ? -1 : 1
     });
-    console.log(oldLeagues);
     const newLeagues = props.leagues.filter((league) => league.isOngoing);
     const football = newLeagues.filter((league) => league.type === 'football');
     const oldFootball = oldLeagues.filter((league) => league.type === 'football');
@@ -23,11 +22,11 @@ const Leagues = (props) =>  {
         <div className='leagues' style={bg}>
             <h3>صفحه لیگ ها</h3>
             <LeagueFilter/>
-            <h4>لیگ های فوتبال</h4>
+            {football.length && <h4>لیگ های فوتبال</h4>}
             {football.map((league) => {
                 return <LeagueItem key={league.name} league={league}/>
             })}
-            <h4>لیگ های بسکتبال</h4>
+            {basketball.length && <h4>لیگ های بسکتبال</h4>}
             {basketball.map((league) => {
                 return <LeagueItem key={league.name} league={league}/>
             })}
