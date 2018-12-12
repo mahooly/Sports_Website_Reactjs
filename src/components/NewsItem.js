@@ -9,7 +9,7 @@ const NewsItem = ({ id, title, description, image, date, tags}) => (
             <Link to={`/news/${id}`}>
                 <h3>{title}</h3>
             </Link>
-            <p>{moment(date).locale('fa').format("MMM-DD HH:mm")}</p>
+            <p>{moment(date).locale('fa').format("DD MMM - HH:mm ")}</p>
             {tags.map((tag) => {
                 return <p key={tag}>{tag}</p>
             })}

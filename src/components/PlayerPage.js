@@ -3,17 +3,18 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import News from './News';
 
+
 const PlayerPage = (props) => (
     <div className='news-page'>
         <div className='player'>
             <div>
                 <img src={props.player.image}/>
-                <p>{props.player.name}</p>
-                <p>{props.player.height} m</p>
-                <p>{props.player.weight} kg</p>
-                <p>{props.player.nationality}</p>
-                <p>Teams: {props.player.teams.map((team) => (
-                    <div><Link key={team} to={`/team/${team}`}>{team.name}</Link> ({team.number}# {team.position})
+                <p>نام: {props.player.name}</p>
+                <p>قد: {props.player.height} متر</p>
+                <p>وزن: {props.player.weight} کیلوگرم</p>
+                <p>ملیت: {props.player.nationality}</p>
+                <p>تیم ها: {props.player.teams.map((team) => (
+                    <div><Link key={team} to={`/team/${team}`}>{team.name}</Link> (شماره‌ی{team.number}، {team.position})
                     </div>))}</p>
             </div>
 

@@ -58,7 +58,7 @@ const MatchPage = (props) => {
                         );
                     })}
                     <tr>
-                        <th colSpan={2}>بازیکنان ذخیره</th>
+                        {props.match.type === 'football' && <th colSpan={2}>بازیکنان ذخیره</th>}
                     </tr>
                     {props.match.subOne.map((player) => {
                         return (
@@ -82,7 +82,7 @@ const MatchPage = (props) => {
                         );
                     })}
                     <tr>
-                        <th colSpan={2}>بازیکنان ذخیره</th>
+                        {props.match.type === 'football' && <th colSpan={2}>بازیکنان ذخیره</th>}
                     </tr>
                     {props.match.subTwo.map((player) => {
                         return (

@@ -1,3 +1,3 @@
 export default (players, { text }) => {
-    return players.filter((player) => player.position === text);
+    return players.filter((player) => text ? player.position.includes(text) : true);
 };

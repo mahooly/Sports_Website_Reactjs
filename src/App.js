@@ -78,7 +78,7 @@ store.dispatch(addMatch({
     winTwo: 0,
     pointOne: 2,
     pointTwo: 2,
-    date: moment('2018-12-5 23:30').valueOf(),
+    date: moment('2018-12-12 18:30').valueOf(),
     stats: [{first: 44, name: 'درصد مالکیت توپ', second: 56}, {first: 7, name: 'موقعیت گل', second: 4}, {first: 447, second: 545, name: 'تعداد پاس ها'}],
     events: [{time: '0', first: 'شروع بازی', second: 'شروع بازی'}, {time: '26', second: 'گل!'}],
     playersOne: [{name: 'داوید دخیا', position: 'دروازه بان'}, {name: 'جسی لینگارد', position: 'هافبک', change: '60'}, {name: 'مارکوس رشفورد', position: 'مهاجم'}],
@@ -112,7 +112,49 @@ store.dispatch(addLeague({
     teams: [{name: 'منچستر یونایتد', matches: 12, points: 31}, {name: 'اتلتیکو مادرید', matches: 12, points: 24}],
     image: 'https://www.freevector.com/uploads/vector/preview/11403/FreeVector-UEFA-Champions-League.jpg'
 }));
-
+store.dispatch(addTeam({
+    name: 'لس آنجلس لیکرز',
+    type: 'basketball',
+    players: [{name: 'لبران جیمز', position: 'فوروارد', image: 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2544.png'}, {name: 'برندن اینگرام', position: 'فوروارد', image: 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1627742.png'}],
+    logo: 'http://mena-en.global.nba.com/media/img/teams/00/logos/LAL_logo.svg'
+}));
+store.dispatch(addPlayer({name: 'لبران جیمز', height: 2.03, weight: 113.4, teams: [{name:'لس آنجلس لیکرز', position: 'فوروارد', number: 23}], image: 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2544.png'}));
+store.dispatch(addPlayer({name: 'برندن اینگرام', height: 2.06, weight: 86.2, teams: [{name:'لس آنجلس لیکرز', position: 'فوروارد', number: 14}], image: 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1627742.png'}));
+store.dispatch(addTeam({
+    name: 'میامی هیت',
+    type: 'basketball',
+    players: [{name: 'حسن وایت ساید', position: 'سنتر', image: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202355.png'}, {name: 'دواین وید', position: 'گارد', image: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2548.png'}],
+    logo: 'http://mena-en.global.nba.com/media/img/teams/00/logos/MIA_logo.svg'
+}));
+store.dispatch(addPlayer({name: 'حسن وایت ساید', height: 2.13, weight: 120.2, teams: [{name:'میامی هیت', position: 'سنتر', number: 21}], image: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202355.png'}));
+store.dispatch(addPlayer({name: 'دواین وید', height: 1.93, weight: 99.8, teams: [{name:'میامی هیت', position: 'گارد', number: 3}], image: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2548.png'}));
+store.dispatch(addMatch({
+    type: 'basketball',
+    teamOne: 'لس آنجلس لیکرز',
+    teamTwo: 'میامی هیت',
+    scoreOne: '105',
+    scoreTwo: '108',
+    league: 'NBA',
+    logoOne: 'http://mena-en.global.nba.com/media/img/teams/00/logos/LAL_logo.svg',
+    logoTwo: 'http://mena-en.global.nba.com/media/img/teams/00/logos/MIA_logo.svg',
+    winOne: 0,
+    winTwo: 1,
+    pointOne: 105,
+    pointTwo: 108,
+    date: moment('2018-12-12 4:30').valueOf(),
+    stats: [{first: 43.8, name: 'درصد پرتاب سه امتیازی', second: 42.4}, {first: 46, name: 'ریباند', second: 50}],
+    events: [{time: '0', first: 'شروع بازی', second: 'شروع بازی'}, {time: '15', second: 'پرتاب دو امتیازی از لنس استیونسون'}],
+    playersOne: [{name: 'لبران جیمز', position: 'فوروارد'}, {name: 'برندن اینگرام', position: 'فوروارد'}],
+    playersTwo: [{name: 'حسن وایت ساید', position: 'سنتر'}, {name: 'دواین وید', position: 'گارد'}],
+}));
+store.dispatch(addLeague({
+    name: 'NBA',
+    isOngoing: true,
+    startDate: moment().valueOf(),
+    type: 'basketball',
+    teams: [{name: 'لس آنجلس لیکرز', matches: 12, points: 113.1}, {name: 'میامی هیت', matches: 10, points: 108.1}],
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEivMFwW4quseIOUDmtS4dy-qEeWBLU1QQP9sbqBVi15iajTqotK60ziU'
+}));
 const jsx = (
     <Provider store={store} className='container'>
         <AppRouter/>
