@@ -4,6 +4,11 @@ import Tabs from './Tabs';
 import moment from 'moment';
 import News from './News';
 import {Link} from 'react-router-dom';
+import fixed_bg from '../../public/images/stadium.png';
+const bg = {
+    backgroundImage: `url(${fixed_bg})`
+};
+
 
 const MatchPage = (props) => {
     const teamOne = props.teams.find((team) => team.name === props.match.teamOne);
@@ -13,7 +18,7 @@ const MatchPage = (props) => {
     const news = props.news.filter((article) => article.tags.includes(teamOne.name) && article.tags.includes(teamTwo.name) && moment(article.date).isAfter(begin) && moment(article.date).isBefore(end));
     const timeline = props.match.events.sort((a,b) => {return a.time > b.time ? -1 : 1});
 
-    return (<div className='team-page'>
+    return (<div className='team-page' style={bg}>
         <h2><img className='logo' src={teamOne.logo}/><Link to={`/team/${teamOne.name}`}>{teamOne.name}</Link> {props.match.scoreOne} - {props.match.scoreTwo} <Link
             to={`/team/${teamTwo.name}`}>{teamTwo.name}</Link><img className='logo' src={teamTwo.logo}/></h2>
         <Tabs>
@@ -62,14 +67,12 @@ const MatchPage = (props) => {
                         return (
                             <tr>
                                 <td>{player.name}</td>
-                                <td>{player.position}</td>
-                                {player.change && <td>{player.change}</td>}
+                                <td>{player.position} {player.change}</td>
                             </tr>
                         );
                     })}
                     <tr>
-                        <th>بازیکنان ذخیره</th>
-                        <th> </th>
+                        <th colSpan={2}>بازیکنان ذخیره</th>
                     </tr>
                     {props.match.subOne.map((player) => {
                         return (
@@ -97,8 +100,7 @@ const MatchPage = (props) => {
                         );
                     })}
                     <tr>
-                        <th>بازیکنان ذخیره</th>
-                        <th>  </th>
+                        <th colSpan={2}>بازیکنان ذخیره</th>
                     </tr>
                     {props.match.subTwo.map((player) => {
                         return (

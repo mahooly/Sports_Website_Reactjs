@@ -24,10 +24,11 @@ const TeamPage = (props) => (
                 {props.team.players.map((player) => {
                     return (
                         <div key={player.name} className='player'>
+                            <img className='player-image' src={player.image} />
                             <p>
                                 <Link to={`/player/${player.name}`}>
                                     {player.name}
-                                </Link> {player.position}
+                                </Link> <div style={{color: 'gray', float: 'left'}}> {player.position} </div>
                             </p>
                         </div>
                     )

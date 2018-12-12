@@ -4,24 +4,44 @@ import {Link} from 'react-router-dom';
 import News from './News';
 
 const PlayerPage = (props) => (
-    <div className='news-page'>
-        <div className='player'>
-            <p>{props.player.name}</p>
-            <p>{props.player.height} m</p>
-            <p>{props.player.weight} kg</p>
-            <p>{props.player.nationality}</p>
-            <p>Teams: {props.player.teams.map((team) => <Link key={team} to={`/team/${team}`}>{team}</Link>)}</p>
+    <div className='player-page'>
+        <div className='player-info'>
+            <div className='player-profile-info'>
+                <h2>{props.player.name}</h2>
+                <p>قد:  {props.player.height} متر</p>
+                <p>وزن: {props.player.weight} کیلوگرم</p>
+                <p>ملیت:    {props.player.nationality}</p>
+                <p>تیم ها: {props.player.teams.map((team) => (
+                    <div><Link key={team} to={`/team/${team}`}>{team.name}</Link> ({team.number}# {team.position})
+                    </div>))}</p>
+            </div>
+            <img className='player-profile-image' src={props.player.image}/>
+        </div>
+
+        <div className='player-stats'>
             <p>آمار</p>
-            {props.player.stats.map((stat) => {
+            {props.player.stats.map((season) => {
                 return (
-                    <tr>
-                        <td>{stat.name}</td>
-                        <td>{stat.value}</td>
-                    </tr>
+                    <div>
+                        <table className='table-format'>
+                            <thead>
+                                <th>فصل</th>
+                                <th>{season.name}</th>
+                            </thead>
+                            {season.stats.map((stat) => {
+                                return (
+                                    <tr>
+                                        <th>{stat.name}</th>
+                                        <td>{stat.value}</td>
+                                    </tr>
+                                )
+                            })}
+                        </table>
+                    </div>
                 )
             })}
-            <News news={props.news}/>
         </div>
+        <News news={props.news}/>
     </div>
 );
 
