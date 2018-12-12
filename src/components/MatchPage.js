@@ -115,7 +115,6 @@ const MatchPage = (props) => {
             </div>
 
             <div label="اخبار">
-                {console.log(news)}
                 <News news={news}/>
             </div>
 

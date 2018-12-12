@@ -5,7 +5,6 @@ import moment from 'moment';
 
 const Scoreboard = (props) => (
   <div className='score-board'>
-      {console.log(props)}
       <h2 className='score-item'>بازی ها</h2>
       {props.matches.map((match) => {
           return <ScoreItem key={match.id} {...match}/>

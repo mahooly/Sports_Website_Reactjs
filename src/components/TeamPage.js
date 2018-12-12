@@ -11,11 +11,12 @@ import playerSelector from '../selectors/players';
 
 class TeamPage extends React.Component {
 
-    render () {
+    render() {
         return (
             <div className='team-page'>
                 <div>
-                    <h2>{this.props.team.logo && <img className='logo' src={this.props.team.logo}/>}{this.props.team.name}</h2>
+                    <h2>{this.props.team.logo &&
+                    <img className='logo' src={this.props.team.logo}/>}{this.props.team.name}</h2>
                 </div>
                 <Tabs>
                     <div label="بازی ها">
@@ -26,30 +27,34 @@ class TeamPage extends React.Component {
                         <News news={this.props.news}/>
                     </div>
                     <div label="اعضای تیم">
-                        <PlayerFilter type={this.props.team.type}/>
-                        {console.log(this.props.players)}
-                        {this.props.players.map((player) => {
-                            return (
-                                <div key={player.name} className='player'>
-                                    <img className='player-image' src={player.image} />
-                                    <p>
-                                        <Link to={`/player/${player.name}`}>
-                                            {player.name}
-                                        </Link> <div style={{color: 'gray', float: 'left'}}> {player.position} </div>
-                                    </p>
-                                </div>
-                            )
-                        })}
-                        {this.props.team.coachingStaff.map((staff) => {
-                            return (
-                                <div key={staff.name}>
-                                    <p>
-                                        {staff.name}
-                                        {staff.position}
-                                    </p>
-                                </div>
-                            )
-                        })}
+                        <div style={{display: 'flex', flexDirection: 'column'}}>
+                            <PlayerFilter type={this.props.team.type}/>
+                            <div style={{display: 'flex', flexDirection: 'row'}}>
+                                {this.props.players.map((player) => {
+                                    return (
+                                        <div key={player.name} className='player'>
+                                            <img className='player-image' src={player.image}/>
+                                            <p>
+                                                <Link to={`/player/${player.name}`}>
+                                                    {player.name}
+                                                </Link>
+                                                <div style={{color: 'gray', float: 'left'}}> {player.position} </div>
+                                            </p>
+                                        </div>
+                                    )
+                                })}
+                                {this.props.team.coachingStaff.map((staff) => {
+                                    return (
+                                        <div key={staff.name}>
+                                            <p>
+                                                {staff.name}
+                                                {staff.position}
+                                            </p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </Tabs>
             </div>

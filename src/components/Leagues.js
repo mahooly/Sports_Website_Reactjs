@@ -21,7 +21,6 @@ const Leagues = (props) =>  {
             {newLeagues.map((league) => {
                 return <LeagueItem key={league.name} league={league}/>
             })}
-            {console.log(oldLeagues)}
             {oldLeagues.length && <p>لیگ های قدیمی</p>}
 
             {oldLeagues.map((league) => {
