@@ -26,6 +26,7 @@
 
 .news-page {
   display: flex;
+  flex-direction: column;
   background: lighten($blue, 25%) fixed;
   min-height: 100vh;
   margin: 0;
@@ -61,4 +62,36 @@
   max-height: fit-content;
   font-size: smaller;
   float: left;
+}
+
+.news-page__comment-section {
+  display: flex;
+  flex-direction: column;
+  background: lighten($blue, 40%);
+  border: 1px solid lighten($gray, 50%);
+  margin-top: $l-size;
+  padding: $xl-size;
+}
+
+.news-page__comment {
+  display: flex;
+  flex-direction: column;
+  background: lighten($blue, 30%);
+  border: 1px solid lighten($gray, 50%);
+  margin-bottom: $s-size;
+  padding: 0;
+}
+
+.comment-header {
+  display: flex;
+  flex-direction: row;
+  background: lighten($blue, 37%);
+  border: none;
+  border-bottom: 1px solid lighten($gray, 50%);
+  margin: 0;
+  padding: 0;
+}
+
+.comment-content {
+  padding: $l-size $s-size $m-size;
 }

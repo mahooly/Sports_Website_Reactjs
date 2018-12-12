@@ -28,21 +28,22 @@ class CommentForm extends React.Component {
     render() {
         return (
             <div>
-                <h5 className="title">نظر شما:</h5>
+                <h3 className="title">نظر شما:</h3>
                 <form onSubmit={this.addComment}>
                     <div className="field">
                         <div className="control">
-                            <input type="text" className="input" name="name" placeholder="Your name"/>
+                            <input type="text" className="input" name="name" placeholder="نام شما"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <div className="field">
+                        <div className="control">
+                            <textarea className="textarea" name="comment" placeholder="نظر خود را بنویسید"> </textarea>
                         </div>
                     </div>
                     <div className="field">
                         <div className="control">
-                            <textarea className="textarea" name="comment" placeholder="Add a comment"></textarea>
-                        </div>
-                    </div>
-                    <div className="field">
-                        <div className="control">
-                            <button className="button is-primary">Submit</button>
+                            <button className="nav button-nav">ثبت نظر</button>
                         </div>
                     </div>
                 </form>

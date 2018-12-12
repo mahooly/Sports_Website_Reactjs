@@ -13,17 +13,20 @@ const NewsPage = (props) => (
     <div className='news-page' style={bg}>
         <div className='news-item'>
             <div className='news-item__content'>
-                <h3>{props.article.title}</h3>
-                <p>{moment(props.article.date).locale('fa').format("DD MMM - HH:mm ")}</p>
-                {props.article.tags.map((tag) => {
-                    return <p key={tag}>{tag}</p>
-                })}
+                <h2>{props.article.title}</h2>
                 <p>{props.article.text}</p>
+                <p className='news-item__date'>{moment(props.article.date).locale('fa').format("DD MMM - HH:mm ")}</p>
+                {props.article.tags.map((tag) => {
+                    return <p className='news-item__tag' key={tag}>{tag}</p>
+                })}
+                <p className='news-item__tag'>{props.article.type}</p>
             </div>
             {props.article.image && <img className='news-item__img' src={props.article.image}/>}
         </div>
-        <CommentForm articleID={props.article.id}/>
-        <Comments comments={props.comments}/>
+        <div className='news-page__comment-section'>
+            <CommentForm articleID={props.article.id}/>
+            <Comments comments={props.comments}/>
+        </div>
     </div>
 );
 
