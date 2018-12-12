@@ -12,7 +12,7 @@ const News = (props) => (
 
 const mapStateToProps = (state, props) => {
     return {
-        news: props.news ? props.news : state.news
+        news: (props.news ? props.news : state.news).reverse()
     };
 };
 
