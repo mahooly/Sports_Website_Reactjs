@@ -15,7 +15,7 @@ export default class ScoreItem extends React.Component {
     };
 
     render() {
-        const {id, teamOne, teamTwo, scoreOne, scoreTwo, date} = this.props;
+        const {id, teamOne, teamTwo, scoreOne, scoreTwo, date, logoOne, logoTwo} = this.props;
         const matchMoment = moment(date);
         matchMoment.locale('fa');
         if (this.state.redirect) {
@@ -24,8 +24,8 @@ export default class ScoreItem extends React.Component {
         return (
             <div className='score-item' onClick={this.onClick}>
                 <p>
-                    <Link to={`/team/${teamOne}`}>{teamOne}</Link> {scoreOne} - {scoreTwo} <Link
-                    to={`/team/${teamTwo}`}>{teamTwo}</Link>
+                    <Link to={`/team/${teamOne}`}><img src={logoOne}/>{teamOne}</Link> {scoreOne} - {scoreTwo} <Link
+                    to={`/team/${teamTwo}`}><img src={logoTwo}/>{teamTwo}</Link>
                 </p>
                 {matchMoment.format("MMM-DD HH:mm")}
             </div>
