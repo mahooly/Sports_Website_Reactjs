@@ -2,6 +2,7 @@
   width: 45%;
   margin: $m-size;
   border: 1px solid lighten($gray, 50%);
+  min-width: fit-content;
 }
 
 .home-page > .score-board { //for football basketball tab
