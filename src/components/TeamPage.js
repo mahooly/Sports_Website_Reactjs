@@ -24,6 +24,7 @@ const TeamPage = (props) => (
                 {props.team.players.map((player) => {
                     return (
                         <div key={player.name} className='player'>
+                            <img src={player.image} />
                             <p>
                                 <Link to={`/player/${player.name}`}>
                                     {player.name}

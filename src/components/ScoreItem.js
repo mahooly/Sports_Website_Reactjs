@@ -27,7 +27,7 @@ export default class ScoreItem extends React.Component {
                     <Link to={`/team/${teamOne}`}><img src={logoOne}/>{teamOne}</Link> {scoreOne} - {scoreTwo} <Link
                     to={`/team/${teamTwo}`}><img src={logoTwo}/>{teamTwo}</Link>
                 </p>
-                {matchMoment.format("MMM-DD HH:mm")}
+                {matchMoment.format("DD MMM - HH:mm ")}
             </div>
         );
     };

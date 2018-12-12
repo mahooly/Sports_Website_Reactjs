@@ -6,20 +6,37 @@ import News from './News';
 const PlayerPage = (props) => (
     <div className='news-page'>
         <div className='player'>
-            <p>{props.player.name}</p>
-            <p>{props.player.height} m</p>
-            <p>{props.player.weight} kg</p>
-            <p>{props.player.nationality}</p>
-            <p>Teams: {props.player.teams.map((team) => <Link key={team} to={`/team/${team}`}>{team}</Link>)}</p>
-            <p>آمار</p>
-            {props.player.stats.map((stat) => {
-                return (
-                    <tr>
-                        <td>{stat.name}</td>
-                        <td>{stat.value}</td>
-                    </tr>
-                )
-            })}
+            <div>
+                <img src={props.player.image}/>
+                <p>{props.player.name}</p>
+                <p>{props.player.height} m</p>
+                <p>{props.player.weight} kg</p>
+                <p>{props.player.nationality}</p>
+                <p>Teams: {props.player.teams.map((team) => (
+                    <div><Link key={team} to={`/team/${team}`}>{team.name}</Link> ({team.number}# {team.position})
+                    </div>))}</p>
+            </div>
+
+            <div>
+                <p>آمار</p>
+                {props.player.stats.map((season) => {
+                    return (
+                        <div>
+                            <h5>{season.name}</h5>
+                            <table>
+                                {season.stats.map((stat) => {
+                                    return (
+                                        <tr>
+                                            <td>{stat.name}</td>
+                                            <td>{stat.value}</td>
+                                        </tr>
+                                    )
+                                })}
+                            </table>
+                        </div>
+                    )
+                })}
+            </div>
             <News news={props.news}/>
         </div>
     </div>
