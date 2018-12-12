@@ -62,9 +62,10 @@ const MatchPage = (props) => {
                     })}
                 </table>}
             </div>
-            <div label="بازیکنان" className='tab-content'>
+            <div label="بازیکنان">
                 {props.match.playersTwo.length === 0 ? <p>لیست بازیکنان هنوز اعلام نشده است.</p> :
-                    <div><img className='logo' src={teamOne.logo}/>
+                    <div className='tab-content'>
+                        <img className='logo' src={teamOne.logo}/>
                         <table className='table-format'>
                             <thead>
                             <th>نام بازیکن</th>
